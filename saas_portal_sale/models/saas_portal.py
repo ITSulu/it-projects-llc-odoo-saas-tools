@@ -1,8 +1,9 @@
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class SaasPortalPlan(models.Model):
     _inherit = 'saas_portal.plan'
+    _description = 'SaaS Portal Hidden Demo Plan Module'
 
     free_subdomains = fields.Boolean(
         help='allow to choose subdomains for trials otherwise allow only after payment',
@@ -18,7 +19,6 @@ class SaasPortalPlan(models.Model):
                                           'saas_plan_id',
                                           'Product variants')
 
-    @api.multi
     def _new_database_vals(self, vals):
         vals = super(SaasPortalPlan, self)._new_database_vals(vals)
 
