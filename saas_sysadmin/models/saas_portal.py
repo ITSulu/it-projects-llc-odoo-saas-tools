@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-from odoo import fields
-from odoo import models
+from odoo import fields, models
 
 
 class SaasPortalServer(models.Model):
