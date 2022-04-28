@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_sysadmin_aws_route53
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 00:53+0000\n"
+"PO-Revision-Date: 2022-04-26 00:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_portal_server__aws_hosted_zone_id
+msgid "AWS Hosted Zone"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__create_zone
+msgid "Create Zone"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__name
+msgid "Domain Name"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__hosted_zone_ID
+msgid "Hosted Zone ID"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__id
+msgid "ID"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: code:addons/saas_sysadmin_aws_route53/models/saas_sysadmin_aws_route53.py:0
+#, python-format
+msgid "Please specify both your AWS Access key and ID"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model,name:saas_sysadmin_aws_route53.model_saas_portal_server
+msgid "SaaS Server"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: code:addons/saas_sysadmin_aws_route53/models/saas_sysadmin_aws_route53.py:0
+#, python-format
+msgid "Supported zone operation!"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: code:addons/saas_sysadmin_aws_route53/models/saas_sysadmin_aws_route53.py:0
+#, python-format
+msgid "This operation requires a supplied value"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model.fields,help:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__create_zone
+msgid ""
+"True if you want zone to be created for you. Leave unchecked if zone has "
+"already been created manually"
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model_terms:ir.ui.view,arch_db:saas_sysadmin_aws_route53.view_server_form
+msgid "example.com."
+msgstr ""
+
+#. module: saas_sysadmin_aws_route53
+#: model:ir.model,name:saas_sysadmin_aws_route53.model_saas_sysadmin_route53_zone
+msgid "saas_sysadmin.route53.zone"
+msgstr ""
