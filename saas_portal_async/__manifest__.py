@@ -1,6 +1,6 @@
 {
     'name': 'SaaS Portal Asynchronous database creation',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.0',
     'author': 'IT-Projects LLC, Nicolas JEUDY',
     "support": "apps@it-projects.info",
     'website': "https://it-projects.info",
@@ -8,8 +8,8 @@
     'category': 'SaaS',
     'depends': [
         'base',
-        'saas_portal',
         'connector',
+        'saas_portal',
     ],
     'installable': False,
     'application': False,
