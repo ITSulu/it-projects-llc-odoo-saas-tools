@@ -1,7 +1,7 @@
 import os
 
-from odoo import models, fields, api, tools
-from odoo.addons.base.module.module import Module as A
+from odoo import api, fields, models, tools
+from odoo.addons.base.models.ir_module import Module as A
 from odoo.modules import get_module_resource
 
 
@@ -39,7 +39,6 @@ class ModuleDemo(models.Model):
         })
         return res
 
-    @api.multi
     def get_demo_images(self):
         self.ensure_one()
         demo_images = self.demo_images and self.demo_images.split(',')

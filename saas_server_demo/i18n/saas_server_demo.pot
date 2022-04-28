@@ -1,0 +1,147 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_server_demo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 00:32+0000\n"
+"PO-Revision-Date: 2022-04-26 00:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_server_demo
+#: model_terms:ir.actions.act_window,help:saas_server_demo.action_saas_server_repositories
+msgid "Click to add a new repository with modules you want to demonstrate to."
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,help:saas_server_demo.field_ir_module_module__demo_addons
+#: model:ir.model.fields,help:saas_server_demo.field_ir_module_module__demo_addons_hidden
+msgid "Comma-separated string of modules technical names"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__currency
+msgid "Currency"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__demo_images
+msgid "Demo Images"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__demo_addons
+msgid "Demo addons"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__demo_addons_hidden
+msgid "Demo addons hidden"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__demo_summary
+msgid "Demo set summary"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__demo_url
+msgid "Demo url"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__id
+msgid "ID"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__installable
+msgid "Installable"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model,name:saas_server_demo.model_ir_module_module
+msgid "Module"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__price
+msgid "Price"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.actions.act_window,name:saas_server_demo.action_saas_server_repositories
+#: model:ir.ui.menu,name:saas_server_demo.menu_saas_server_repositories
+#: model_terms:ir.ui.view,arch_db:saas_server_demo.view_saas_server_repository_tree
+msgid "Repositories"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__path
+#: model_terms:ir.ui.view,arch_db:saas_server_demo.view_saas_server_repository_form
+msgid "Repository"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.constraint,message:saas_server_demo.constraint_saas_server_repository_path_unique
+msgid "Repository already exists."
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,help:saas_server_demo.field_ir_module_module__currency
+msgid "The currency the field is expressed in."
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,field_description:saas_server_demo.field_ir_module_module__demo_title
+msgid "Title of a demo set. Also title for demo product on the portal"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model.fields,help:saas_server_demo.field_ir_module_module__demo_images
+msgid ""
+"file names, the files should be placed in /static/description/demo of the "
+"module"
+msgstr ""
+
+#. module: saas_server_demo
+#: model:ir.model,name:saas_server_demo.model_saas_server_repository
+msgid "saas_server.repository"
+msgstr ""

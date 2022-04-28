@@ -1,7 +1,7 @@
 import os
 import logging
 import odoo
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 import subprocess
 import tempfile
@@ -11,6 +11,7 @@ _logger = logging.getLogger(__name__)
 
 class SaasServerRepository(models.Model):
     _name = 'saas_server.repository'
+    _description = 'SaaS Server Repository'
 
     path = fields.Selection('_get_repositories',
                             string='Repository', required='True')
@@ -29,7 +30,6 @@ class SaasServerRepository(models.Model):
                  if p not in [base_addons, main_addons] and os.path.exists(p + '/.git')]
         return paths
 
-    @api.multi
     def update(self):
         cwd = os.getcwd()
         ret = []

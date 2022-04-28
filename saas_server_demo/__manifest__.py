@@ -1,16 +1,14 @@
 {
     "name": """Saas Server Demo""",
-    "summary": """new parameters in __openerp__.py for demonstrative modules, control repositories for demonstration""",
+    "summary": """new parameters in __manifest__.py for demonstrative modules, control repositories for demonstration""",
     "category": "SaaS",
     "images": [],
-    "version": "11.0.1.0.0",
-
+    "version": "13.0.1.0.0",
     "author": "IT-Projects LLC, Ildar Nasyrov, Nicolas JEUDY",
     "website": "https://it-projects.info",
     "license": "GPL-3",
     # "price": 9.00,
     # "currency": "EUR",
-
     "depends": [
         "saas_server",
     ],
@@ -22,7 +20,6 @@
     ],
     "demo": [
     ],
-
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
