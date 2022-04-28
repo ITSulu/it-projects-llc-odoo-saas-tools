@@ -5,7 +5,7 @@ from odoo.tools import mute_logger
 class IrConfigParameter(models.Model):
     _inherit = 'ir.config_parameter'
 
-    @api.model_cr
+    @api.model
     @mute_logger('odoo.addons.base.ir.ir_config_parameter')
     def init(self, force=False):
         super(IrConfigParameter, self).init(force=force)

@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_client
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 19:57+0000\n"
+"PO-Revision-Date: 2022-04-22 19:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_client
+#: model_terms:ir.ui.view,arch_db:saas_client.view_saas_general_configuration
+msgid "<span class=\"o_form_label\">Your domain</span>"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model.fields,field_description:saas_client.field_res_config_settings__current_domain
+msgid "Current Domain"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Database storage:"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model.fields,field_description:saas_client.field_res_config_settings__domain_change_link
+msgid "Domain Change Link"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Expiration date:"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "File storage:"
+msgstr ""
+
+#. module: saas_client
+#: model:auth.oauth.provider,body:saas_client.saas_oauth_provider
+msgid "Log in via SaaS Portal"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Max users allowed:"
+msgstr ""
+
+#. module: saas_client
+#: code:addons/saas_client/models/res_user.py:0
+#, python-format
+msgid ""
+"Maximum allowed users is %(max_users)s, while you already have %(cur_users)s"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Mb"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model.fields,field_description:saas_client.field_res_users__oauth_provider_id
+msgid "OAuth Provider"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Pay subscription"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_publisher_warranty_contract
+msgid "Publisher Warranty Contract"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "SaaS"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.actions.server,name:saas_client.saas_action_run_ir_action_todo
+msgid "SaaS Run Remaining Action Todo"
+msgstr ""
+
+#. module: saas_client
+#: model:res.groups,name:saas_client.group_saas_support
+msgid "SaaS Support"
+msgstr ""
+
+#. module: saas_client
+#: model_terms:ir.ui.view,arch_db:saas_client.view_saas_general_configuration
+msgid "Saas Tools"
+msgstr ""
+
+#. module: saas_client
+#: model:res.groups,comment:saas_client.group_saas_support
+msgid "Special group for superuser. Should not be used for client users"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_ir_config_parameter
+msgid "System Parameter"
+msgstr ""
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_res_users
+msgid "Users"
+msgstr ""
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Users count:"
+msgstr ""

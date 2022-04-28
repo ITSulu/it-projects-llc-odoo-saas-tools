@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_client
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 19:57+0000\n"
+"PO-Revision-Date: 2022-04-25 08:18-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_client
+#: model_terms:ir.ui.view,arch_db:saas_client.view_saas_general_configuration
+msgid "<span class=\"o_form_label\">Your domain</span>"
+msgstr "<span class=\"o_form_label\">Tu dominio</span>"
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: saas_client
+#: model:ir.model.fields,field_description:saas_client.field_res_config_settings__current_domain
+msgid "Current Domain"
+msgstr "Dominio actual"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Database storage:"
+msgstr "Almacenamiento de base de datos:"
+
+#. module: saas_client
+#: model:ir.model.fields,field_description:saas_client.field_res_config_settings__domain_change_link
+msgid "Domain Change Link"
+msgstr "Enlace de cambio de dominio"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Expiration date:"
+msgstr "Fecha de caducidad:"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "File storage:"
+msgstr "Almacenamiento de archivos:"
+
+#. module: saas_client
+#: model:auth.oauth.provider,body:saas_client.saas_oauth_provider
+msgid "Log in via SaaS Portal"
+msgstr "Iniciar sesión a través del portal SaaS"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Max users allowed:"
+msgstr "Máximo de usuarios permitidos:"
+
+#. module: saas_client
+#: code:addons/saas_client/models/res_user.py:0
+#, python-format
+msgid ""
+"Maximum allowed users is %(max_users)s, while you already have %(cur_users)s"
+msgstr ""
+"El máximo de usuarios permitidos es %(max_users)s, mientras que ya tiene "
+"%(cur_users)s"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Mb"
+msgstr "Mb"
+
+#. module: saas_client
+#: model:ir.model.fields,field_description:saas_client.field_res_users__oauth_provider_id
+msgid "OAuth Provider"
+msgstr "Proveedor de OAuth"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Pay subscription"
+msgstr "Pagar suscripción"
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_publisher_warranty_contract
+#, fuzzy
+msgid "Publisher Warranty Contract"
+msgstr "Contrato de garantía del editor"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "SaaS"
+msgstr "SaaS"
+
+#. module: saas_client
+#: model:ir.actions.server,name:saas_client.saas_action_run_ir_action_todo
+#, fuzzy
+msgid "SaaS Run Remaining Action Todo"
+msgstr "SaaS Ejecutar Acción restante Todo"
+
+#. module: saas_client
+#: model:res.groups,name:saas_client.group_saas_support
+msgid "SaaS Support"
+msgstr "Soporte SaaS"
+
+#. module: saas_client
+#: model_terms:ir.ui.view,arch_db:saas_client.view_saas_general_configuration
+msgid "Saas Tools"
+msgstr "Herramientas Saas"
+
+#. module: saas_client
+#: model:res.groups,comment:saas_client.group_saas_support
+msgid "Special group for superuser. Should not be used for client users"
+msgstr ""
+"Grupo especial para superusuario. No debe usarse para usuarios de clientes."
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_ir_config_parameter
+msgid "System Parameter"
+msgstr "Parámetro del sistema"
+
+#. module: saas_client
+#: model:ir.model,name:saas_client.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: saas_client
+#. openerp-web
+#: code:addons/saas_client/static/src/xml/saas_dashboard.xml:0
+#, python-format
+msgid "Users count:"
+msgstr "Contar usuarios:"
