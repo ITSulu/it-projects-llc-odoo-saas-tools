@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_portal_signup
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 01:20+0000\n"
+"PO-Revision-Date: 2022-04-26 01:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_portal_signup
+#: model_terms:ir.ui.view,arch_db:saas_portal_signup.signup_fields
+msgid "Country"
+msgstr ""
+
+#. module: saas_portal_signup
+#: model_terms:ir.ui.view,arch_db:saas_portal_signup.signup_fields
+msgid "Desired web address for your system"
+msgstr ""
+
+#. module: saas_portal_signup
+#: code:addons/saas_portal_signup/controllers/main.py:0
+#, python-format
+msgid "Domain exists"
+msgstr ""
+
+#. module: saas_portal_signup
+#: code:addons/saas_portal_signup/controllers/main.py:0
+#, python-format
+msgid "Only letters or numbers are allowed in domain."
+msgstr ""
+
+#. module: saas_portal_signup
+#: code:addons/saas_portal_signup/controllers/main.py:0
+#, python-format
+msgid "Passwords do not match; please retype them."
+msgstr ""
+
+#. module: saas_portal_signup
+#: model_terms:ir.ui.view,arch_db:saas_portal_signup.signup_fields
+msgid "Plan"
+msgstr ""
+
+#. module: saas_portal_signup
+#: code:addons/saas_portal_signup/controllers/main.py:0
+#, python-format
+msgid "Please enter a valid email address."
+msgstr ""
+
+#. module: saas_portal_signup
+#: code:addons/saas_portal_signup/controllers/main.py:0
+#, python-format
+msgid "The form was not properly filled in."
+msgstr ""
+
+#. module: saas_portal_signup
+#: model_terms:ir.ui.view,arch_db:saas_portal_signup.signup_fields
+msgid "your-company-name"
+msgstr ""
