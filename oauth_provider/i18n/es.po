@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * oauth_provider
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 15:05+0000\n"
+"PO-Revision-Date: 2022-04-25 12:09-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__token
+msgid "Access Token"
+msgstr "Token de acceso"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__application_id
+msgid "Application"
+msgstr "Solicitud"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__create_uid
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__create_date
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__client_id
+msgid "Database UUID"
+msgstr "UUID Base de datos"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__display_name
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__expires
+msgid "Expires"
+msgstr "Caduca"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__id
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__id
+msgid "ID"
+msgstr "ID"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token____last_update
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__write_uid
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__write_date
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__scope
+msgid "Scope"
+msgstr "Alcance"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__token_ids
+msgid "Tokens"
+msgstr "Tokens"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: oauth_provider
+#: model:ir.model.constraint,message:oauth_provider.constraint_oauth_application_client_id_uniq
+msgid "client_id should be unique!"
+msgstr "¡client_id debería ser único!"
+
+#. module: oauth_provider
+#: model:ir.model,name:oauth_provider.model_oauth_access_token
+msgid "oauth.access_token"
+msgstr "oauth.access_token"
+
+#. module: oauth_provider
+#: model:ir.model,name:oauth_provider.model_oauth_application
+msgid "oauth.application"
+msgstr "oauth.application"
