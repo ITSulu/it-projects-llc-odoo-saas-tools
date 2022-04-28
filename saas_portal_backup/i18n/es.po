@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_portal_backup
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 19:59+0000\n"
+"PO-Revision-Date: 2022-04-25 08:20-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_portal_backup
+#: model:ir.model.fields,help:saas_portal_backup.field_saas_portal_client__backup
+msgid ""
+"Backs up first before deleting                              or upgrading"
+msgstr ""
+"Primero realiza una copia de seguridad antes de "
+"eliminar                              o actualizar"
+
+#. module: saas_portal_backup
+#: model_terms:ir.ui.view,arch_db:saas_portal_backup.view_clients_form
+msgid "Backup DB"
+msgstr "Respaldo de base de datos"
+
+#. module: saas_portal_backup
+#: model:ir.model.fields,field_description:saas_portal_backup.field_saas_portal_client__backup
+msgid "Backup on Modify"
+msgstr "Copia de seguridad al modificar"
+
+#. module: saas_portal_backup
+#: model:ir.model,name:saas_portal_backup.model_saas_portal_client
+msgid "Client"
+msgstr "Cliente"
+
+#. module: saas_portal_backup
+#: model_terms:ir.ui.view,arch_db:saas_portal_backup.view_clients_form
+msgid "Database settings"
+msgstr "Configuración de la base de datos"
