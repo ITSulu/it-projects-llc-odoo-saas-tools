@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_sysadmin_mailgun
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 01:00+0000\n"
+"PO-Revision-Date: 2022-04-26 01:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_sysadmin_mailgun
+#: model:ir.model,name:saas_sysadmin_mailgun.model_saas_portal_client
+msgid "Client"
+msgstr ""
+
+#. module: saas_sysadmin_mailgun
+#: model:ir.model,name:saas_sysadmin_mailgun.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: saas_sysadmin_mailgun
+#: model:ir.model.fields,field_description:saas_sysadmin_mailgun.field_saas_portal_client__mail_domain
+msgid "Mail domain"
+msgstr ""
+
+#. module: saas_sysadmin_mailgun
+#: model:ir.model.fields,field_description:saas_sysadmin_mailgun.field_res_config_settings__saas_mailgun_api_key
+msgid "Mailgun API Key"
+msgstr ""
+
+#. module: saas_sysadmin_mailgun
+#: model_terms:ir.ui.view,arch_db:saas_sysadmin_mailgun.res_config_settings_view_form_inherited_sys_mailgun
+msgid "Mailgun API Key."
+msgstr ""
+
+#. module: saas_sysadmin_mailgun
+#: model_terms:ir.ui.view,arch_db:saas_sysadmin_mailgun.res_config_settings_view_form_inherited_sys_mailgun
+msgid "Sysadmin Mailgun Settings"
+msgstr ""
+
+#. module: saas_sysadmin_mailgun
+#: model:ir.model,name:saas_sysadmin_mailgun.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr ""

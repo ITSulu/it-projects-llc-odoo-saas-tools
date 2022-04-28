@@ -3,15 +3,13 @@
     "summary": """This module configurates new databases for clients such as their users can send and receive mails""",
     "category": "SaaS",
     "images": [],
-    "version": "11.0.1.0.0",
-
+    "version": "13.0.1.0.0",
     "author": "IT-Projects LLC, Ildar Nasyrov, Nicolas JEUDY",
     "support": "apps@it-projects.info",
     "website": "https://it-projects.info",
     "license": "LGPL-3",
     # "price": 9.00,
     # "currency": "EUR",
-
     "depends": [
         "saas_sysadmin_aws_route53",
     ],
