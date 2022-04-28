@@ -59,7 +59,7 @@ class SaasServerClient(models.Model):
                     try:
                         sftp.chdir(currentDir)
                     except Exception as e:
-                        print(('(Part of the) path doesn\'t exist. Creating it now at ' + currentDir))
+                        print((_('(Part of the) path doesn\'t exist. Creating it now at ') + currentDir))
                         # Make directory and then navigate into it
                         sftp.mkdir(currentDir, mode=777)
                         sftp.chdir(currentDir)

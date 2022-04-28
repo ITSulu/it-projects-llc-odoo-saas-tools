@@ -1,0 +1,254 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_server_backup_ftp
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 23:42+0000\n"
+"PO-Revision-Date: 2022-04-25 19:58-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_server_backup_ftp
+#: code:addons/saas_server_backup_ftp/models/saas_server.py:0
+#, python-format
+msgid "(Part of the) path doesn't exist. Creating it now at "
+msgstr "(Parte de la) ruta no existe. Creándolo ahora en"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "/odoo/backups/"
+msgstr "/odoo/backups/"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "/opt/odoo/.ssh/id_rsa"
+msgstr "/opt/odoo/.ssh/id_rsa"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "192.168.0.1"
+msgstr "192.168.0.1"
+
+#. module: saas_server_backup_ftp
+#: model:ir.actions.server,name:saas_server_backup_ftp.ir_cron_backup_saas_scheduler0_ir_actions_server
+#: model:ir.cron,cron_name:saas_server_backup_ftp.ir_cron_backup_saas_scheduler0
+#: model:ir.cron,name:saas_server_backup_ftp.ir_cron_backup_saas_scheduler0
+msgid "Backup SaaS Databases Scheduler"
+msgstr "Planificador de bases de datos SaaS de copia de seguridad"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model,name:saas_server_backup_ftp.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: saas_server_backup_ftp
+#: code:addons/saas_server_backup_ftp/models/res_config.py:0
+#, python-format
+msgid "Connection Test Failed!"
+msgstr "¡La prueba de conexión falló!"
+
+#. module: saas_server_backup_ftp
+#: code:addons/saas_server_backup_ftp/models/res_config.py:0
+#, python-format
+msgid "Connection Test Succeeded!"
+msgstr "¡Prueba de conexión exitosa!"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "Go to Settings / Technical / Automation / Scheduled Actions."
+msgstr "Vaya a Ajustes / Técnico / Automatización / Acciones programadas."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "Help"
+msgstr "Ayuda"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__sftp_server
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "IP address of your remote server. For example 192.168.0.1"
+msgstr "Dirección IP de su servidor remoto. Por ejemplo 192.168.0.1"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__rsa_key_passphrase
+msgid "Passphrase for RSA key"
+msgstr "Frase de contraseña para la clave RSA"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__rsa_key_passphrase
+msgid "Passphrase used when rsa key was generated"
+msgstr "Frase de contraseña utilizada cuando se generó la clave rsa"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__sftp_password
+msgid "Password User SFTP Server"
+msgstr "Contraseña Usuario Servidor SFTP"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__sftp_path
+msgid "Path external server"
+msgstr "Ruta de servidor externo"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__rsa_key_path
+msgid "Path to RSA key on Odoo server"
+msgstr "Ruta a la clave RSA en el servidor Odoo"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "SFTP Backup Settings"
+msgstr "Ajustes de copia de seguridad de SFTP"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__sftp_server
+msgid "SFTP Server Address"
+msgstr "Dirección del servidor SFTP"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__sftp_public_key
+msgid "SFTP-Server public key"
+msgstr "Clave pública del servidor SFTP"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "Search the action named 'Backup saas databases scheduler'."
+msgstr ""
+"Busque la acción denominada 'Planificador de bases de datos SaaS de copia de "
+"seguridad'."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid ""
+"Set the scheduler to active and fill in how often you want backups "
+"generated."
+msgstr ""
+"Configure el planificador como activo y complete la frecuencia con la que "
+"desea que se generen las copias de seguridad."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "Test SFTP Connection"
+msgstr "Prueba de conexión SFTP"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "The location of the folder with rsa key on Odoo server."
+msgstr "La ubicación de la carpeta con clave rsa en el servidor Odoo."
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__sftp_path
+msgid ""
+"The location to the folder where the dumps should be written\n"
+"             to. For example /odoo/backups/.\n"
+"Files will then be written to\n"
+"             /odoo/backups/ on your remote server."
+msgstr ""
+"La ubicación de la carpeta donde se deben escribir los archivos respaldados."
+"\n"
+"             Por ejemplo /odoo/backups/.\n"
+"Luego, los archivos se escribirán en la ruta\n"
+"             /odoo/backups/ en su servidor remoto."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid ""
+"The location to the folder where the dumps should be written to. For example"
+" /odoo/backups/.<br/>Files will then be written to /odoo/backups/ on your "
+"remote server."
+msgstr ""
+"La ubicación de la carpeta donde se deben escribir los archivos respaldados. "
+"Por ejemplo /odoo/backups/.\n"
+"Luego, los archivos se escribirán en la ruta /odoo/backups/ en su servidor "
+"remoto."
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__rsa_key_path
+msgid ""
+"The location to the folder where the rsa key is saved. For example "
+"/opt/odoo/.ssh/id_rsa."
+msgstr ""
+"La ubicación de la carpeta donde se guarda la clave rsa. Por ejemplo la ruta "
+"/opt/odoo/.ssh/id_rsa."
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__sftp_password
+msgid ""
+"The password from the user where the SFTP connection should be\n"
+"              made with. This is the password from the user on the\n"
+"              external server."
+msgstr ""
+"La contraseña del usuario con el que se debe realizar la \n"
+"              conexión SFTP. Esta es la contraseña del usuario en el\n"
+"              servidor externo."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid ""
+"The password from the user where the SFTP connection should be made with. "
+"This is the password from the user on the external server."
+msgstr ""
+"La contraseña del usuario con el que se debe realizar la conexión SFTP. Esta "
+"es la contraseña del usuario en el servidor externo."
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__sftp_username
+msgid ""
+"The username where the SFTP connection should be made with.\n"
+"        This is the user on the external server."
+msgstr ""
+"El nombre del usuario con el que se debe realizar la conexión SFTP.\n"
+"        Este es el usuario en el servidor externo."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid ""
+"The username where the SFTP connection should be made with. This is the user"
+" on the external server."
+msgstr ""
+"El nombre del usuario con el que se debe realizar la conexión SFTP. Este es "
+"el usuario en el servidor externo."
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid ""
+"This configures the sftp server for store backups of client databases.<br/>\n"
+"              Automatic backups of the database can be scheduled as follows:"
+msgstr ""
+"Esto configura el servidor sftp para almacenar copias de seguridad de bases "
+"de datos de clientes.<br/>\n"
+"              Las copias de seguridad automáticas de la base de datos se "
+"pueden programar de la siguiente manera:"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,field_description:saas_server_backup_ftp.field_res_config_settings__sftp_username
+msgid "Username on SFTP Server"
+msgstr "Nombre de usuario en el servidor SFTP"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model.fields,help:saas_server_backup_ftp.field_res_config_settings__sftp_public_key
+msgid ""
+"Verify SFTP server's identity using its public rsa-key\n"
+"                                  The host key verification protects you from man-in-the-middle attacks"
+msgstr ""
+"Verifique la identidad del servidor SFTP utilizando su clave rsa pública\n"
+"                                  La verificación de la clave del host lo "
+"protege de los ataques de intermediarios"
+
+#. module: saas_server_backup_ftp
+#: model:ir.model,name:saas_server_backup_ftp.model_saas_server_client
+msgid "saas_server.client"
+msgstr "saas_server.client"
+
+#. module: saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_ftp.res_config_settings_view_form_inherited_backup_ftp
+msgid "username"
+msgstr "nombre de usuario"

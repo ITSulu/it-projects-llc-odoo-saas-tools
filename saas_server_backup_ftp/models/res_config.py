@@ -1,8 +1,7 @@
 import base64
 import paramiko
 
-from odoo import models, fields, api
-from odoo import _, exceptions
+from odoo import _, api, exceptions, fields, models
 
 import logging
 _logger = logging.getLogger(__name__)
@@ -45,7 +44,6 @@ class SaasPortalConfigWizard(models.TransientModel):
         string='Passphrase for RSA key',
         help='''Passphrase used when rsa key was generated''')
 
-    @api.multi
     def set_values(self):
         super(SaasPortalConfigWizard, self).set_values()
         ICPSudo = self.env['ir.config_parameter'].sudo()
