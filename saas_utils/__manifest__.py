@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -21,7 +20,7 @@
 
 {
     'name': 'SaaS Utils',
-    'version': '11.0.1.0.1',
+    'version': '13.0.1.0.1',
     'author': 'OpenJAF, Nicolas JEUDY',
     'license': 'LGPL-3',
     "support": "apps@it-projects.info",
