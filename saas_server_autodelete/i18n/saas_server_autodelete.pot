@@ -1,0 +1,23 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_server_autodelete
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 23:20+0000\n"
+"PO-Revision-Date: 2022-04-25 23:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_server_autodelete
+#: model:ir.actions.server,name:saas_server_autodelete.ir_cron_update_ribbons_ir_actions_server
+#: model:ir.cron,cron_name:saas_server_autodelete.ir_cron_update_ribbons
+#: model:ir.cron,name:saas_server_autodelete.ir_cron_update_ribbons
+msgid "Delete expired databases"
+msgstr ""
