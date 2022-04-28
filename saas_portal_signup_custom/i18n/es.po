@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_portal_signup_custom
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 14:36+0000\n"
+"PO-Revision-Date: 2022-04-25 10:38-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_portal_signup_custom
+#: model_terms:ir.ui.view,arch_db:saas_portal_signup_custom.signup_fields_custom
+msgid "Country"
+msgstr "País"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,help:saas_portal_signup_custom.field_product_product__plan_ids
+#: model:ir.model.fields,help:saas_portal_signup_custom.field_product_template__plan_ids
+msgid ""
+"Create db per each selected plan - use the DB Names prefix setting in each "
+"selected plans"
+msgstr ""
+"Cree db para cada plan seleccionado: use la configuración de prefijo DB "
+"Names en cada plan seleccionado"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_saas_portal_plan__dbname_prefix
+msgid "DB Names prefix"
+msgstr "Prefijo de nombres de base de datos"
+
+#. module: saas_portal_signup_custom
+#: model_terms:ir.ui.view,arch_db:saas_portal_signup_custom.signup_fields_custom
+msgid "Product"
+msgstr "Producto"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model,name:saas_portal_signup_custom.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_product_product__plan_ids
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_product_template__plan_ids
+msgid "SaaS Plans"
+msgstr "Planes SaaS"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_product_product__saas_default
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_product_template__saas_default
+msgid "Use as default SaaS product"
+msgstr "Utilizar como producto SaaS predeterminado"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,help:saas_portal_signup_custom.field_product_product__saas_default
+#: model:ir.model.fields,help:saas_portal_signup_custom.field_product_template__saas_default
+msgid "Use as default SaaS product on signup form"
+msgstr "Usar como producto SaaS predeterminado en el formulario de registro"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_product_product__on_create_email_template
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_product_template__on_create_email_template
+msgid "credentials mail"
+msgstr "correo de credenciales"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model,name:saas_portal_signup_custom.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr "saas_portal.plan"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,help:saas_portal_signup_custom.field_saas_portal_plan__dbname_prefix
+msgid ""
+"specify this field if you want to create several databases at once using "
+"saas_portal_signup module"
+msgstr ""
+"especifique este campo si desea crear varias bases de datos a la vez "
+"utilizando el módulo saas_portal_signup"
