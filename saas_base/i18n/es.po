@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_base
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 19:56+0000\n"
+"PO-Revision-Date: 2022-04-25 07:38-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__users_len
+msgid "Count users"
+msgstr "Contar usuarios"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__db_storage
+msgid "DB storage (MB)"
+msgstr "Almacenamiento de base de datos (MB)"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__file_storage
+msgid "File storage (MB)"
+msgstr "Almacenamiento de archivos (MB)"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__id
+msgid "ID"
+msgstr "ID"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__max_users
+msgid "Max users allowed"
+msgstr "Máximo de usuarios permitidos"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__total_storage_limit
+msgid "Total storage limit (MB)"
+msgstr "Límite total de almacenamiento (MB)"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client__trial
+msgid "Trial"
+msgstr "Prueba"
+
+#. module: saas_base
+#: model:ir.model.fields,help:saas_base.field_saas_base_client__trial
+msgid "indication of trial clients"
+msgstr "indicación de clientes de prueba"
+
+#. module: saas_base
+#: model:ir.model,name:saas_base.model_saas_base_client
+msgid "saas_base.client"
+msgstr "saas_base.client"
