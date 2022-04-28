@@ -1,0 +1,157 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_portal_tagging
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 22:08+0000\n"
+"PO-Revision-Date: 2022-04-25 22:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__child_ids
+msgid "Child Categories"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model,name:saas_portal_tagging.model_saas_portal_client
+msgid "Client"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_plan__category_ids
+msgid "Client Tags"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.saas_portal_tag_client_view_form
+msgid "Close"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__create_uid
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__create_date
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__name
+msgid "Employee Tag"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__id
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__id
+msgid "ID"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category____last_update
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__write_uid
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__write_date
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.actions.act_window,name:saas_portal_tagging.action_tag_client
+msgid "Modify Tag"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__display_name
+msgid "Name"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__parent_id
+msgid "Parent Employee Tag"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model,name:saas_portal_tagging.model_saas_portal_category
+msgid "SaaS Client  Category"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.view_saas_client_category_list
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.view_saas_client_category_tree
+msgid "SaaS Client Categories"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.view_saas_client_category_form
+msgid "SaaS Client Category"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.actions.act_window,name:saas_portal_tagging.open_view_saas_categ_form
+#: model:ir.ui.menu,name:saas_portal_tagging.menu_view_saas_client_category_form
+msgid "Saas Client Tags"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_client__category_ids
+#: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__category_ids
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.saas_portal_tag_client_view_form
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.view_clients_form
+msgid "Tags"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.view_plans_form
+msgid "e.g. Bronze Package"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.saas_portal_tag_client_view_form
+msgid "or"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model,name:saas_portal_tagging.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model:ir.model,name:saas_portal_tagging.model_saas_portal_tag_client
+msgid "saas_portal.tag_client"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.saas_portal_tag_client_view_form
+msgid "tag"
+msgstr ""
+
+#. module: saas_portal_tagging
+#: model_terms:ir.ui.view,arch_db:saas_portal_tagging.saas_portal_tag_client_view_form
+msgid "tag client"
+msgstr ""

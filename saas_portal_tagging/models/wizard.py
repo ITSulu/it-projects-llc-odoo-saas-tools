@@ -1,8 +1,9 @@
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class SaasTagClient(models.TransientModel):
     _name = 'saas_portal.tag_client'
+    _description = 'SaaS Tag Client'
 
     @api.model
     def _default_categories(self):
@@ -16,7 +17,6 @@ class SaasTagClient(models.TransientModel):
         default=_default_categories
     )
 
-    @api.multi
     def apply(self):
         self.ensure_one()
         client = self.env['saas_portal.client'].browse(

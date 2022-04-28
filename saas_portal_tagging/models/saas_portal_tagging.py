@@ -1,17 +1,17 @@
-from odoo import models, fields, api
+from odoo import api, fields, models
 from odoo.exceptions import Warning
 
 
 class SaasPortalCategory(models.Model):
+    _name = "saas.portal.category"
+    _description = "SaaS Client Category"
 
-    @api.multi
     def name_get(self):
         res = []
         for record in self:
             res.append((record.id, record.display_name))
         return res
 
-    @api.one
     @api.depends('name')
     def _name_get_fnc(self):
         name = self.name
@@ -19,8 +19,6 @@ class SaasPortalCategory(models.Model):
             name = self.parent_id.name + ' / ' + name
         self.display_name = name
 
-    _name = "saas.portal.category"
-    _description = "SaaS Client  Category"
     name = fields.Char(
         "Employee Tag",
         required=True
@@ -43,7 +41,6 @@ class SaasPortalCategory(models.Model):
     )
 
     @api.constrains('parent_id')
-    @api.multi
     def _check_recursion(self):
         level = 100
         cr = self.env.cr
