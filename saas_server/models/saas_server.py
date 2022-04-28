@@ -1,16 +1,16 @@
-import time
+import odoo
 import psycopg2
+import time
 import random
 import string
 
-import odoo
 from datetime import datetime
+from odoo import SUPERUSER_ID, api, exceptions, fields, models
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.addons.saas_base.tools import get_size
 from odoo.service import db
 from odoo.tools.translate import _
-from odoo.addons.saas_base.tools import get_size
-from odoo import api, models, fields, SUPERUSER_ID, exceptions
 from .. import ADMINUSER_ID
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 import logging
 _logger = logging.getLogger(__name__)
@@ -23,6 +23,7 @@ def random_password(len=32):
 
 class SaasServerClient(models.Model):
     _name = 'saas_server.client'
+    _description = 'SaaS Server Client'
     _inherit = ['mail.thread', 'saas_base.client']
 
     name = fields.Char('Database name', readonly=True, required=True)
@@ -44,7 +45,6 @@ class SaasServerClient(models.Model):
          'client_id should be unique!'),
     ]
 
-    @api.multi
     def create_database(self, template_db=None, demo=False, lang='en_US'):
         self.ensure_one()
         new_db = self.name
@@ -60,13 +60,11 @@ class SaasServerClient(models.Model):
         self.state = 'open'
         return res
 
-    @api.multi
     def registry(self, new=False, **kwargs):
         self.ensure_one()
         m = odoo.modules.registry.Registry
         return m.new(self.name, **kwargs)
 
-    @api.multi
     def install_addons(self, addons, is_template_db):
         self.ensure_one()
         addons = set(addons)
@@ -82,7 +80,6 @@ class SaasServerClient(models.Model):
             env = api.Environment(cr, SUPERUSER_ID, self._context)
             self._install_addons(env, addons)
 
-    @api.multi
     def disable_mail_servers(self):
         '''
         disables mailserver on db to stop it from sending and receiving mails
@@ -98,18 +95,15 @@ class SaasServerClient(models.Model):
         if len(outgoing_mail_servers):
             outgoing_mail_servers.write({'active': False})
 
-    @api.multi
     def _install_addons(self, client_env, addons):
         for addon in client_env['ir.module.module'].search([
                 ('name', 'in', list(addons))]):
             addon.button_install()
 
-    @api.multi
     def update_registry(self):
         self.ensure_one()
         self.registry(new=True, update_module=True)
 
-    @api.multi
     def prepare_database(self, **kwargs):
         self.ensure_one()
         with self.registry().cursor() as cr:
@@ -120,7 +114,6 @@ class SaasServerClient(models.Model):
     def _config_parameters_to_copy(self):
         return ['saas_client.saas_dashboard']
 
-    @api.multi
     def _prepare_database(self,
                           client_env,
                           owner_user=None,
@@ -222,12 +215,10 @@ class SaasServerClient(models.Model):
     def update_all(self):
         self.sudo().search([]).update()
 
-    @api.multi
     def update_one(self):
         for server in self:
             server.sudo().update()
 
-    @api.multi
     def update(self):
         for record in self:
             try:
@@ -242,7 +233,6 @@ class SaasServerClient(models.Model):
                     record.state = 'deleted'
                 return
 
-    @api.multi
     def _get_data(self, client_env, check_client_id):
         self.ensure_one()
         client_id = client_env['ir.config_parameter'].sudo(
@@ -283,14 +273,12 @@ class SaasServerClient(models.Model):
             data.update({'state': 'pending'})
         return data
 
-    @api.multi
     def upgrade_database(self, **kwargs):
         for record in self:
             with record.registry().cursor() as cr:
                 env = api.Environment(cr, SUPERUSER_ID, record._context)
                 return record._upgrade_database(env, **kwargs)
 
-    @api.multi
     def _upgrade_database(self, client_env, data):
         self.ensure_one()
         # "data" comes from saas_portal/models/wizard.py::upgrade_database
@@ -413,13 +401,11 @@ class SaasServerClient(models.Model):
         _logger.info('delete_expired_databases %s', res)
         res.delete_database()
 
-    @api.multi
     def delete_database(self):
         for record in self:
             db.exp_drop(self.name)
         self.write({'state': 'deleted'})
 
-    @api.multi
     def rename_database(self, new_dbname):
         for record in self:
             db.exp_rename(self.name, new_dbname)
@@ -435,7 +421,6 @@ class SaasServerClient(models.Model):
               install one of saas_server_backup_* or remove
               saas_portal_backup'''))
 
-    @api.multi
     def backup_database(self):
         res = []
         for database_obj in self:

@@ -1,6 +1,6 @@
 {
     'name': 'SaaS Server',
-    'version': '12.0.1.0.0',
+    'version': '13.0.1.0.0',
     'author': 'Ivan Yelizariev, Nicolas JEUDY',
     'license': 'LGPL-3',
     'category': 'SaaS',
@@ -13,12 +13,12 @@
         'website',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'views/saas_server.xml',
         'views/res_config_settings_views.xml',
         'data/auth_oauth_data.xml',
         'data/ir_config_parameter.xml',
         'data/pre_install.xml',
-        'security/ir.model.access.csv',
     ],
     'installable': True,
 }

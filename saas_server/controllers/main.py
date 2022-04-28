@@ -1,10 +1,9 @@
-import functools
 import datetime
-import werkzeug.utils
+import functools
 import simplejson
+import werkzeug.utils
 
-from odoo import api, SUPERUSER_ID
-from odoo import http
+from odoo import SUPERUSER_ID, api, http
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from odoo.tools.translate import _
 from odoo.http import request
@@ -180,7 +179,7 @@ class SaasServer(http.Controller):
         client = request.env['saas_server.client'].sudo().search([('client_id', '=', client_id)])
         if not client:
             if not state.get('force_delete'):
-                raise Exception('Client not found')
+                raise Exception(_('Client not found'))
             client = request.env['saas_server.client'].sudo().create({'name': db, 'client_id': client_id})
         client = client[0]
         client.delete_database()
@@ -245,7 +244,7 @@ class SaasServer(http.Controller):
 
         client = request.env['saas_server.client'].sudo().search([('client_id', '=', client_id)])
         if not client:
-            raise Exception('Client not found')
+            raise Exception(_('Client not found'))
         client = client[0]
         result = client.backup_database()
         return simplejson.dumps(result)

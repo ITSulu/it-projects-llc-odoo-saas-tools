@@ -1,0 +1,355 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_server
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 22:30+0000\n"
+"PO-Revision-Date: 2022-04-25 22:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_server
+#: code:addons/saas_server/controllers/main.py:0
+#, python-format
+msgid ""
+"'You use a live preview. The database will be destroyed after %s hour%s.'"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: saas_server
+#: code:addons/saas_server/controllers/main.py:0
+#, python-format
+msgid "Client not found"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model,name:saas_server.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.ui.menu,name:saas_server.menu_saas_server_config
+msgid "Configuration"
+msgstr ""
+
+#. module: saas_server
+#: code:addons/saas_server/controllers/main.py:0
+#, python-format
+msgid "Contact Us"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__users_len
+msgid "Count users"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__db_storage
+msgid "DB storage (MB)"
+msgstr ""
+
+#. module: saas_server
+#: model_terms:ir.ui.view,arch_db:saas_server.view_clients_form
+msgid "Database"
+msgstr ""
+
+#. module: saas_server
+#: model_terms:ir.ui.view,arch_db:saas_server.view_saas_server_client_filter
+msgid "Database Name"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__client_id
+msgid "Database UUID"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__name
+msgid "Database name"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.actions.act_window,name:saas_server.action_clients
+#: model:ir.ui.menu,name:saas_server.menu_clients
+#: model_terms:ir.ui.view,arch_db:saas_server.view_clients_tree
+msgid "Databases"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__deleted
+msgid "Deleted"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__expiration_datetime
+msgid "Expiration Datetime"
+msgstr ""
+
+#. module: saas_server
+#: model_terms:ir.ui.view,arch_db:saas_server.res_config_settings_view_form_inherit_saas_server
+msgid "Features"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__file_storage
+msgid "File storage (MB)"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__host
+msgid "Host"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__id
+msgid "ID"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__message_needaction
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__open
+#: model_terms:ir.ui.view,arch_db:saas_server.view_saas_server_client_filter
+msgid "In Progress"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: saas_server
+#: model:auth.oauth.provider,body:saas_server.saas_oauth_provider
+msgid "Log in via SaaS Portal"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__max_users
+msgid "Max users allowed"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__draft
+msgid "New"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__pending
+msgid "Pending"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.ui.menu,name:saas_server.menu_saas
+msgid "SaaS"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.ui.menu,name:saas_server.menu_base_saas
+msgid "SaaS Server"
+msgstr ""
+
+#. module: saas_server
+#: model_terms:ir.ui.view,arch_db:saas_server.res_config_settings_view_form_inherit_saas_server
+msgid "Saas Server"
+msgstr ""
+
+#. module: saas_server
+#: model_terms:ir.ui.view,arch_db:saas_server.view_saas_server_client_filter
+msgid "Search Client"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.actions.act_window,name:saas_server.action_saas_server_config_settings
+#: model:ir.ui.menu,name:saas_server.menu_saas_server_general_settings
+msgid "Settings"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__state
+msgid "State"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__template
+msgid "Template"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__total_storage_limit
+msgid "Total storage limit (MB)"
+msgstr ""
+
+#. module: saas_server
+#: code:addons/saas_server/models/saas_server.py:0
+#, python-format
+msgid ""
+"Transport agent has not been configured. You need either\n"
+"              install one of saas_server_backup_* or remove\n"
+"              saas_portal_backup"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__trial
+msgid "Trial"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_res_config_settings__module_saas_server_backup_ftp
+msgid "Use SFTP Backup profile"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_res_config_settings__module_saas_server_backup_ftp
+#: model_terms:ir.ui.view,arch_db:saas_server.res_config_settings_view_form_inherit_saas_server
+msgid "Use saas_server_backup_ftp module"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.constraint,message:saas_server.constraint_saas_server_client_client_id_uniq
+msgid "client_id should be unique!"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_saas_server_client__trial
+msgid "indication of trial clients"
+msgstr ""
+
+#. module: saas_server
+#: model:ir.model,name:saas_server.model_saas_server_client
+msgid "saas_server.client"
+msgstr ""
