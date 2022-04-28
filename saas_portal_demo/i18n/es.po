@@ -1,0 +1,422 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_portal_demo
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-25 20:40+0000\n"
+"PO-Revision-Date: 2022-04-25 16:53-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_portal_demo
+#: model:mail.template,body_html:saas_portal_demo.email_template_create_saas_for_demo
+msgid ""
+"\n"
+"\n"
+"            <p>\n"
+"                Hello ${object.partner_id.name},<br />\n"
+"                Your new ${object.plan_id.name} instance is ready.<br />\n"
+"                % if ctx['user'].partner_id.signup_valid:\n"
+"                        In order to get access to the instance, please accept an invitation to portal by clicking on the link below.\n"
+"                        After you have set your password you will be redirected to a page with a list of your instances. Just click on the name to open and starting testing.\n"
+"\n"
+"                        <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                            <div style=\"text-align: center; margin-top: 16px;\">\n"
+"                                 <a href=\"${ctx['user'].signup_url}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Accept invitation to portal</a>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                % else:\n"
+"                        Here is the link to access:<br />\n"
+"                        <a href=\"${object.public_url}\">${object.public_url}</a><br />\n"
+"                        <p>You can login using your email and password provided when signing up.</p>\n"
+"                % endif\n"
+"            </p>\n"
+"            <p>\n"
+"\t\tTrial ends on ${object.expiration_datetime}.<br />\n"
+"            </p>\n"
+"            <p>Best regards,</p>\n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"\n"
+"            <p>\n"
+"                Hola ${object.partner_id.name},<br />\n"
+"                Tu nueva instancia de ${object.plan_id.name} está lista.<br "
+"/>\n"
+"                % if ctx['user'].partner_id.signup_valid:\n"
+"                        Para obtener acceso a la instancia, acepte una "
+"invitación al portal haciendo clic en el enlace a continuación.\n"
+"                        Una vez que haya establecido su contraseña, será "
+"redirigido a una página con una lista de sus instancias. Simplemente haga "
+"clic en el nombre para abrir y comenzar la prueba.\n"
+"\n"
+"                        <div style=\""
+"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top "
+"/100%;color:#777777\">\n"
+"                            <div style=\"text-align: center; margin-top: "
+"16px;\">\n"
+"                                 <a href=\"${ctx['user'].signup_url}\" style="
+"\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; "
+"border-color:#875A7B; text-decoration: none; display: inline-block; margin-"
+"bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; "
+"cursor: pointer; white-space: nowrap; background-image: none; background-"
+"color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Aceptar "
+"invitación al portal</a>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                % else:\n"
+"                        Aquí está el enlace para acceder:<br />\n"
+"                        <a href=\"${object.public_url}\""
+">${object.public_url}</a><br />\n"
+"                        <p>Puede iniciar sesión con su correo electrónico y "
+"contraseña proporcionados al registrarse.</p>\n"
+"                % endif\n"
+"            </p>\n"
+"            <p>\n"
+"\t\tLa prueba finaliza el ${object.expiration_datetime}.<br />\n"
+"            </p>\n"
+"            <p>Saludos,</p>\n"
+"\n"
+"            "
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_10
+msgid "10.0"
+msgstr "10.0"
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_11
+msgid "11.0"
+msgstr "11.0"
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_8
+msgid "8.0"
+msgstr "8.0"
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_9
+msgid "9.0"
+msgstr "9.0"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "<b>Also available for</b><br/>"
+msgstr "<b>También disponible para</b><br/>"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__author
+msgid "Author"
+msgstr "Autor"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Create Demo Template DBs"
+msgstr "Crear bases de datos de plantillas de demostración"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__create_uid
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__create_date
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__currency
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_plans_form
+msgid "Demo Hidden Modules"
+msgstr "Módulos ocultos de demostración"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_plans_form
+msgid "Demo Modules"
+msgstr "Módulos de demostración"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_product_product__module_name
+#: model:ir.model.fields,help:saas_portal_demo.field_product_template__module_name
+msgid "Demo module technical name"
+msgstr "Nombre técnico del módulo de demostración"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__demo_plan_id
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__demo_plan_id
+msgid "Demo plan where the module intended to be installed"
+msgstr "Plan de demostración donde se pretende instalar el módulo"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__display_name
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Generate Demo Plans"
+msgstr "Generar planes de demostración"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__id
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__id
+msgid "ID"
+msgstr "ID"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__icon_attachment_id
+msgid "Icon Attachment"
+msgstr "Adjunto de icono"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "Instance"
+msgstr "Instancia"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_home_menu_demo
+msgid "Instances"
+msgstr "Instancias"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module____last_update
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__write_uid
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__write_date
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__shortdesc
+msgid "Module Name"
+msgstr "Nombre del Módulo"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_product__module_name
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_template__module_name
+msgid "Module name"
+msgstr "Nombre del módulo"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_plan__demo_plan_hidden_module_ids
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_plan__demo_plan_module_ids
+msgid "Modules"
+msgstr "Módulos"
+
+#. module: saas_portal_demo
+#: model:ir.actions.act_url,name:saas_portal_demo.action_open_my_instances
+msgid "My Instances"
+msgstr "Mis Instancias"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "Odoo Saas Tools"
+msgstr "Herramientas Odoo SaaS"
+
+#. module: saas_portal_demo
+#: model:product.attribute,name:saas_portal_demo.odoo_version_product_attribute
+msgid "Odoo Version"
+msgstr "Versión de Odoo"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_product__variant_plan_id
+msgid "Plan for Variant"
+msgstr "Plan para variante"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "Powered by"
+msgstr "Hecho con"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__price
+msgid "Price"
+msgstr "Precio"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "Prices are quoted without dependencies"
+msgstr "Los precios se cotizan sin dependencias"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Restart Server"
+msgstr "Reiniciar servidor"
+
+#. module: saas_portal_demo
+#: model:ir.actions.server,name:saas_portal_demo.ir_cron_restart_server_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal_demo.ir_cron_restart_server
+#: model:ir.cron,name:saas_portal_demo.ir_cron_restart_server
+msgid "Restart server with demo"
+msgstr "Reiniciar servidor con demostración"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.product_product_saas
+msgid "SaaS Demo"
+msgstr "Demostración SaaS"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_server
+msgid "SaaS Server"
+msgstr "Servidor SaaS"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_product__saas_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_template__saas_demo
+msgid "Saas Demo"
+msgstr "Demostración SaaS"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__summary
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__technical_name
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__technical_name
+msgid "Technical Name"
+msgstr "Nombre técnico"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "The following modules are included in this demonstration:"
+msgstr "Los siguientes módulos están incluidos en esta demostración:"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_saas_portal_plan__demo_plan_hidden_module_ids
+#: model:ir.model.fields,help:saas_portal_demo.field_saas_portal_plan__demo_plan_module_ids
+msgid "The modules that should be in this demo plan"
+msgstr "Los módulos que deberían estar en este plan de demostración"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_home_demo
+msgid "There are currently no SaaS instances for your account."
+msgstr "Actualmente no hay instancias de SaaS para su cuenta."
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "There are currently no instances for your account."
+msgstr "Actualmente no hay instancias para su cuenta."
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_product_product__saas_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_product_template__saas_demo
+msgid "This product template is used for saas demo"
+msgstr "Esta plantilla de producto se utiliza para la demostración saas"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_product
+msgid "Try trial"
+msgstr "Tratar prueba"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Update Repositories"
+msgstr "Actualizar repositorios"
+
+#. module: saas_portal_demo
+#: model:ir.actions.server,name:saas_portal_demo.ir_cron_update_repositories_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal_demo.ir_cron_update_repositories
+#: model:ir.cron,name:saas_portal_demo.ir_cron_update_repositories
+msgid "Update repositories with demo"
+msgstr "Actualizar repositorios con demo"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Update templates"
+msgstr "Actualizar plantillas"
+
+#. module: saas_portal_demo
+#: model:ir.actions.server,name:saas_portal_demo.ir_cron_update_templates_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal_demo.ir_cron_update_templates
+#: model:ir.cron,name:saas_portal_demo.ir_cron_update_templates
+msgid "Update templates for demo"
+msgstr "Actualizar plantillas para demostración"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "Valid Until"
+msgstr "Válido hasta"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_home_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "Your Instances"
+msgstr "Sus Instancias"
+
+#. module: saas_portal_demo
+#: model:mail.template,subject:saas_portal_demo.email_template_create_saas_for_demo
+msgid "Your demo instance for ${object.plan_id.name}"
+msgstr "Su instancia de demostración para ${object.plan_id.name}"
+
+#. module: saas_portal_demo
+#: model_terms:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "by"
+msgstr "por"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_database
+msgid "saas_portal.database"
+msgstr "saas_portal.database"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_demo_plan_module
+msgid "saas_portal.demo_plan_module"
+msgstr "saas_portal.demo_plan_module"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_hidden_demo_plan_module
+msgid "saas_portal.hidden_demo_plan_module"
+msgstr "saas_portal.hidden_demo_plan_module"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr "saas_portal.plan"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__url
+msgid "url"
+msgstr "url"

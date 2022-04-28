@@ -1,13 +1,12 @@
 import xmlrpc.client
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 from odoo import SUPERUSER_ID as SI
 
 
 class SaasPortalServer(models.Model):
     _inherit = 'saas_portal.server'
 
-    @api.multi
     def _get_xmlrpc_object(self, db_name):
         self.ensure_one()
 
@@ -22,7 +21,6 @@ class SaasPortalServer(models.Model):
 
         return db, uid, password, xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
-    @api.multi
     def _get_odoo_version(self):
         self.ensure_one()
         db, uid, password, models = self._get_xmlrpc_object(self.name)
@@ -53,7 +51,6 @@ class SaasPortalServer(models.Model):
             'currency': module.get('currency'),
         }
 
-    @api.multi
     def _create_demo_plan(self, demo_module):
         self.ensure_one()
 
@@ -87,7 +84,6 @@ class SaasPortalServer(models.Model):
         else:
             return None
 
-    @api.multi
     def _create_demo_images(self, demo_module):
         self.ensure_one()
 
@@ -98,13 +94,12 @@ class SaasPortalServer(models.Model):
 
         return images
 
-    @api.multi
     def _create_demo_product(self, demo_module, plan):
         self.ensure_one()
 
         product_template_obj = self.env['product.template']
         product_product_obj = self.env['product.product']
-        product_attribute_line_obj = self.env['product.attribute.line']
+        product_attribute_line_obj = self.env['product.template.attribute.line']
 
         product_template_name = demo_module['demo_title']
         product_template = product_template_obj.search(
@@ -154,7 +149,6 @@ class SaasPortalServer(models.Model):
             'variant_plan_id': plan.id,
         })
 
-    @api.multi
     def generate_demo_plans(self):
         demo_plan_module_obj = self.env['saas_portal.demo_plan_module']
         demo_plan_hidden_module_obj = self.env['saas_portal.hidden_demo_plan_module']
@@ -191,7 +185,6 @@ class SaasPortalServer(models.Model):
 
         return True
 
-    @api.multi
     def create_demo_templates(self):
         plan_obj = self.env['saas_portal.plan']
         for record in self:
@@ -226,7 +219,6 @@ class SaasPortalServer(models.Model):
 
         return True
 
-    @api.multi
     def update_repositories(self):
         for record in self:
             db, uid, password, models = record._get_xmlrpc_object(record.name)
@@ -236,7 +228,6 @@ class SaasPortalServer(models.Model):
                               'saas_server.repository', 'update', [ids])
         return True
 
-    @api.multi
     def restart_server(self):
         for record in self:
             db, uid, password, models = record._get_xmlrpc_object(record.name)
@@ -244,7 +235,6 @@ class SaasPortalServer(models.Model):
                               'saas_server.client', 'restart_server', [])
         return True
 
-    @api.multi
     def update_templates(self):
         for record in self:
             plans = self.env['saas_portal.plan'].search([('server_id', '=', record.id),
@@ -268,6 +258,7 @@ class SaasPortalServer(models.Model):
 
 class SaaSPortalDemoPlanModule(models.Model):
     _name = 'saas_portal.demo_plan_module'
+    _description = 'SaaS Portal Demo Plan Module'
     _rec_name = 'technical_name'
 
     technical_name = fields.Char('Technical Name')
@@ -282,7 +273,6 @@ class SaaSPortalDemoPlanModule(models.Model):
     price = fields.Float(string='Price')
     currency = fields.Char("Currency")
 
-    @api.multi
     @api.depends('technical_name')
     def _compute_url(self):
         for record in self:
@@ -292,6 +282,7 @@ class SaaSPortalDemoPlanModule(models.Model):
 
 class SaaSPortalHiddenDemoPlanModule(models.Model):
     _name = 'saas_portal.hidden_demo_plan_module'
+    _description = 'SaaS Portal Hidden Demo Plan Module'
     _rec_name = 'technical_name'
 
     technical_name = fields.Char('Technical Name')
@@ -311,7 +302,6 @@ class SaasPortalDemoPlan(models.Model):
 class SaasPortalDatabase(models.Model):
     _inherit = 'saas_portal.database'
 
-    @api.multi
     def _get_xmlrpc_object(self):
         self.ensure_one()
         url = self.server_id.local_request_scheme + '://' + self.server_id.local_host
