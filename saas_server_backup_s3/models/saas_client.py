@@ -7,10 +7,7 @@ import base64
 from tempfile import NamedTemporaryFile
 import math
 
-from odoo import _
-from odoo import api
-from odoo import exceptions
-from odoo import models
+from odoo import _, api, exceptions, models
 
 import logging
 _logger = logging.getLogger(__name__)
