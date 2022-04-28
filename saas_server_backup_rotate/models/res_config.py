@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class SaasServerWizard(models.TransientModel):
@@ -29,7 +29,6 @@ class SaasServerWizard(models.TransientModel):
         description='Set the number of hourly backups to preserve during rotation'
     )
 
-    @api.multi
     def set_values(self):
         super(SaasServerWizard, self).set_values()
         ICPSudo = self.env['ir.config_parameter'].sudo()

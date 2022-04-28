@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_server_backup_rotate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 00:07+0000\n"
+"PO-Revision-Date: 2022-04-26 00:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "12"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "24"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model,name:saas_server_backup_rotate.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model.fields,field_description:saas_server_backup_rotate.field_res_config_settings__backup_rotate_daily
+msgid "Daily Count"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model.fields,field_description:saas_server_backup_rotate.field_res_config_settings__backup_rotate_hourly
+msgid "Hourly Count"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model.fields,field_description:saas_server_backup_rotate.field_res_config_settings__backup_rotate_monthly
+msgid "Monthly Count"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "Rotate Backup Settings"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.actions.server,name:saas_server_backup_rotate.saas_server_backup_agent_delete_expired_ir_actions_server
+#: model:ir.cron,cron_name:saas_server_backup_rotate.saas_server_backup_agent_delete_expired
+#: model:ir.cron,name:saas_server_backup_rotate.saas_server_backup_agent_delete_expired
+msgid "Saas Server - Delete Expired Backup"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "Set the number of daily backups to preserve during rotation."
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "Set the number of hourly backups to preserve during rotation."
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "Set the number of monthly backups to preserve during rotation."
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "Set the number of weekly backups to preserve during rotation."
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model_terms:ir.ui.view,arch_db:saas_server_backup_rotate.res_config_settings_view_form_inherited_saas_portal
+msgid "Set the number of yearly backups to preserve during rotation."
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model.fields,field_description:saas_server_backup_rotate.field_res_config_settings__backup_rotate_unlimited
+msgid "Unlimited Backup"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model.fields,field_description:saas_server_backup_rotate.field_res_config_settings__backup_rotate_weekly
+msgid "Weekly Count"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model.fields,field_description:saas_server_backup_rotate.field_res_config_settings__backup_rotate_yearly
+msgid "Yearly Count"
+msgstr ""
+
+#. module: saas_server_backup_rotate
+#: model:ir.model,name:saas_server_backup_rotate.model_saas_server_client
+msgid "saas_server.client"
+msgstr ""
