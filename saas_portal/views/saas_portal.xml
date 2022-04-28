@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
         <menuitem name="SaaS" id="menu_base_saas" sequence="30" web_icon="saas_portal,static/description/icon.png"/>
         <menuitem id="menu_saas" parent="menu_base_saas" name="SaaS" sequence="1"/>
@@ -30,9 +30,12 @@
                     <button name="%(action_edit_database)d" type="action"
                             icon="fa-sign-in" attrs="{'invisible':[('state', 'in', ['deleted', 'draft'])]}"
                             help="Log in to client database."/>
-                    <button name="show_upgrade_wizard" attrs="{'invisible':[('state', 'in', ['deleted'])]}" type="object" icon="fa-cogs" help="Configure client database"/>
-                    <button name="delete_database_server" type="object" attrs="{'invisible':[('state', 'in', ['draft', 'deleted'])]}" icon="fa-eraser" help="Delete client database"
-                    confirm="Are you sure to delete this database?"/>
+                    <button name="show_upgrade_wizard" attrs="{'invisible':[('state', 'in', ['deleted'])]}"
+                            type="object" icon="fa-cogs" help="Configure client database"/>
+                    <button name="delete_database_server" type="object"
+                            attrs="{'invisible':[('state', 'in', ['draft', 'deleted'])]}" icon="fa-eraser"
+                            help="Delete client database"
+                            confirm="Are you sure to delete this database?"/>
                 </tree>
             </field>
         </record>
@@ -50,41 +53,43 @@
                                 icon="fa-sign-in" class="oe_highlight"
                                 help="Log in to client database."
                                 />
-                        <button string="Configure" name="show_upgrade_wizard" type="object" attrs="{'invisible':[('state', 'in', ['deleted','draft'])]}" icon="fa-cogs" />
-                        <button string="Delete" name="delete_database_server" type="object" attrs="{'invisible':['|',('state', 'in', ['draft', 'deleted'])]}" icon="fa-eraser"
-                        confirm="Are you sure to delete this database?"/>
+                        <button string="Configure" name="show_upgrade_wizard" type="object"
+                                attrs="{'invisible':[('state', 'in', ['deleted','draft'])]}" icon="fa-cogs"/>
+                        <button string="Delete" name="delete_database_server" type="object"
+                                attrs="{'invisible':['|',('state', 'in', ['draft', 'deleted'])]}" icon="fa-eraser"
+                                confirm="Are you sure to delete this database?"/>
                         <button string="Sync server" type="object" name="action_sync_server" icon="fa-refresh"/>
                         <button string="Sync client" type="object" name="sync_client" icon="fa-refresh"/>
                         <button name="%(saas_portal.action_rename_database)d" string="Rename Database" type="action"/>
                         <field name="state" widget="statusbar" statusbar_visible="open,pending,deleted" clickable=""/>
                     </header>
                     <sheet>
-                    <group>
                         <group>
-                            <field name="client_id" readonly="1"/>
-                            <field name="name" readonly="1"/>
-                            <field name="plan_id"/>
-                            <field name="partner_id"/>
-                            <field name="users_len"/>
-                            <field name="max_users"/>
-                            <field name="file_storage"/>
-                            <field name="db_storage"/>
-                            <field name="total_storage_limit"/>
-                            <field name="server_id"/>
-                            <field name="notification_sent"/>
-                            <field name="support_team_id"/>
+                            <group>
+                                <field name="client_id" readonly="1"/>
+                                <field name="name" readonly="1"/>
+                                <field name="plan_id"/>
+                                <field name="partner_id"/>
+                                <field name="users_len"/>
+                                <field name="max_users"/>
+                                <field name="file_storage"/>
+                                <field name="db_storage"/>
+                                <field name="total_storage_limit"/>
+                                <field name="server_id"/>
+                                <field name="notification_sent"/>
+                                <field name="support_team_id"/>
+                            </group>
+                            <group name="subscription">
+                                <field name="trial"/>
+                                <field name="expiration_datetime"/>
+                            </group>
                         </group>
-                        <group name="subscription">
-                            <field name="trial"/>
-                            <field name="expiration_datetime"/>
+                        <group string="Settings" name="settings">
+                            <field name="block_on_expiration" class="oe_inline"/>
+                            <field name="block_on_storage_exceed" class="oe_inline"/>
                         </group>
-                    </group>
-                    <group string="Settings" name="settings">
-                        <field name="block_on_expiration" class="oe_inline"/>
-                        <field name="block_on_storage_exceed" class="oe_inline"/>
-                    </group>
-                    <notebook>
-                    </notebook>
+                        <notebook>
+                        </notebook>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
@@ -114,7 +119,6 @@
             <field name="name">Clients</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas_portal.client</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref="view_saas_portal_client_filter"/>
             <field name="context">{'search_default_current': 1}</field>
@@ -123,7 +127,6 @@
         <menuitem action="action_clients" id="menu_clients" parent="menu_saas" sequence="10"/>
 
         <!-- Server -->
-
         <record id="view_server_tree" model="ir.ui.view">
             <field name="name">saas_portal.server.tree</field>
             <field name="model">saas_portal.server</field>
@@ -148,45 +151,47 @@
                         <!-- TODO
                              action_create_server will ask for master password only.
                              * https://erppeek.readthedocs.org/en/latest/api.html#erppeek.Client.create_database
-                        <button string="Create Server" name="%(action_create_server
-)d" type="action" class="oe_highlight" states="draft"/>
+                        <button string="Create Server" name="%(action_create_server)d" type="action" class="oe_highlight" states="draft"/>
                         -->
-                        <button string="Open Server" name="action_redirect_to_server" type="object" icon="fa-sign-in" class="oe_highlight" attrs="{'invisible': [('id', '=', False)]}"/>
-                        <button name="action_sync_server" type="object" string="Sync server" icon="fa-refresh" attrs="{'invisible': [('id', '=', False)]}"/>
+                        <button string="Open Server" name="action_redirect_to_server" type="object" icon="fa-sign-in"
+                                class="oe_highlight" attrs="{'invisible': [('id', '=', False)]}"/>
+                        <button name="action_sync_server" type="object" string="Sync server" icon="fa-refresh"
+                                attrs="{'invisible': [('id', '=', False)]}"/>
                         <field name="id" invisible="1" />
                     </header>
                     <sheet>
-                    <group>
                         <group>
-                            <field name="odoo_version"/>
-                            <field name="name"/>
-                            <field name="client_id"/>
-                            <field name="active"/>
-                            <field name="request_scheme"/>
-                            <field name="request_port"/>
+                            <group>
+                                <field name="odoo_version"/>
+                                <field name="name"/>
+                                <field name="client_id"/>
+                                <field name="active"/>
+                                <field name="request_scheme"/>
+                                <field name="request_port"/>
+                            </group>
+                            <group string="Server-side requests">
+                                <field name="local_request_scheme"/>
+                                <field name="verify_ssl"
+                                       attrs="{'invisible': [('local_request_scheme', '!=', 'https')]}"/>
+                                <field name="local_host"/>
+                                <field name="local_port"/>
+                            </group>
+                            <group string="Credentials for rpc">
+                                <field name="password" password="True"/>
+                            </group>
+                            <group string="Client Settings">
+                                <field name="clients_host_template"/>
+                            </group>
                         </group>
-                        <group string="Server-side requests">
-                          <field name="local_request_scheme"/>
-                          <field name="verify_ssl" attrs="{'invisible': [('local_request_scheme', '!=', 'https')]}"/>
-                          <field name="local_host"/>
-                          <field name="local_port"/>
-                        </group>
-                        <group string="Credentials for rpc">
-                          <field name="password" password="True"/>
-                        </group>
-                        <group string="Client Settings">
-                          <field name="clients_host_template"/>
-                        </group>
-                    </group>
-                    <field name="client_ids" readonly="1">
-                        <tree>
-                            <field name="name"/>
-                            <field name="state"/>
-                            <field name="users_len"/>
-                            <field name="file_storage"/>
-                            <field name="db_storage"/>
-                        </tree>
-                    </field>
+                        <field name="client_ids" readonly="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="state"/>
+                                <field name="users_len"/>
+                                <field name="file_storage"/>
+                                <field name="db_storage"/>
+                            </tree>
+                        </field>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
@@ -200,14 +205,12 @@
             <field name="name">Servers</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas_portal.server</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem action="saas_portal.action_server" id="menu_server" parent="saas_portal.menu_saas" sequence="20"/>
 
         <!-- Plan -->
-
         <record id="view_plans_tree" model="ir.ui.view">
             <field name="name">saas_portal.plans.tree</field>
             <field name="model">saas_portal.plan</field>
@@ -222,30 +225,36 @@
             </field>
         </record>
 
-
         <record id="view_plans_form" model="ir.ui.view">
             <field name="name">saas_portal.plans.form</field>
             <field name="model">saas_portal.plan</field>
             <field name="arch" type="xml">
                 <form string="plans">
                     <header>
-                        <button string="Create template DB" name="create_template_button" type="object" attrs="{'invisible':['|', '|', ('state','not in', ['draft']), ('server_id','=',False), ('template_id','=',False)]}" icon="fa-play" class="oe_highlight"/>
+                        <button string="Create template DB" name="create_template_button" type="object"
+                                attrs="{'invisible':['|', '|', ('state','not in', ['draft']), ('server_id','=',False), ('template_id','=',False)]}"
+                                icon="fa-play" class="oe_highlight"/>
                         <button string="Log in to template DB" name="%(action_edit_database)d"
                                 type="action" states="confirmed" icon="fa-edit"
                                 class="oe_highlight"/>
                         <!--<button string="Configure template DB" name="upgrade_template" type="object" states="confirmed" icon="fa-play" />-->
-                        <button string="Delete template DB" name="delete_template" type="object" states="confirmed" icon="fa-undo" />
-                        <button string="Sync server" type="object" name="action_sync_server" icon="fa-refresh" attrs="{'invisible': [('id', '=', False)]}"/>
-                        <button string="Create Client" type="action" name="%(action_create_client)d" states="confirmed"/>
+                        <button string="Delete template DB" name="delete_template" type="object" states="confirmed"
+                                icon="fa-undo"/>
+                        <button string="Sync server" type="object" name="action_sync_server" icon="fa-refresh"
+                                attrs="{'invisible': [('id', '=', False)]}"/>
+                        <button string="Create Client" type="action" name="%(action_create_client)d"
+                                states="confirmed"/>
                         <field name="state" widget="statusbar"/>
-                        <field name="id" invisible="1" />
+                        <field name="id" invisible="1"/>
                     </header>
                     <sheet>
                         <div class="oe_left" style="width: 500px;">
                             <field name="logo" widget="image" class="oe_avatar oe_left"/>
                             <div class="oe_title" style="width: 390px;">
                                 <label class="oe_edit_only" for="name" string="Name"/>
-                                <h1><field name="name" class="oe_inline"/></h1>
+                                <h1>
+                                    <field name="name" class="oe_inline"/>
+                                </h1>
                                 <label class="oe_edit_only" for="summary" string="Summary"/>
                                 <field name="summary"/>
                             </div>
@@ -290,83 +299,89 @@
             <field name="name">Plans</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas_portal.plan</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem action="action_plans" id="menu_plans" parent="saas_portal.menu_saas" sequence="30"/>
 
         <!-- Config -->
-
         <record id="action_database_form" model="ir.ui.view">
             <field name="name">action.database.form</field>
             <field name="model">saas.config</field>
             <field name="arch" type="xml">
                 <form string="Configure Database" create="false" edit="false" delete="false">
-                     <group>
-                        <field name="id" invisible="1" />
+                    <group>
+                        <field name="id" invisible="1"/>
                         <field name="action" readonly="1"/>
 
-                     </group>
-                     <notebook>
-                     <page string="Result"  attrs="{'invisible': [('id', '=', False)]}">
-                        <field name="description" />
-                     </page>
+                    </group>
+                    <notebook>
+                        <page string="Result" attrs="{'invisible': [('id', '=', False)]}">
+                            <field name="description"/>
+                        </page>
 
-                     <page string="Addons"  attrs="{'invisible': [('action', '!=', 'upgrade')]}">
-                         <p>Comma-separated list of addons to Update, Install or Uninstall, e.g. <em>point_of_sale,website_sale</em></p>
-                         <group>
-                            <field name="update_addons_list"/>
-                             <field name="update_addons"/>
-                             <field name="install_addons"/>
-                             <field name="uninstall_addons"/>
-                         </group>
-                     </page>
-                     <page string="Parameters" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
-                         <field name="param_ids" colspan="4" >
-                             <tree editable="bottom">
-                                 <field name="key" />
-                                 <field name="value" />
-                             </tree>
-                         </field>
-                     </page>
-                     <page string="Access rights">
-                         <p>Comma-separated list of references to res.groups, e.g. <em>base.group_sale_manager,stock.group_stock_manager</em>.</p>
-                         <group>
-                             <field name="access_owner_add"/>
-                             <field name="access_remove"/>
-                         </group>
-                     </page>
-                     <page string="Commands" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
-                         <p>This sections allows execute special commands on client. Ask developers for instructions.</p>
-                         <field name="fix_ids" colspan="4" >
-                             <tree editable="bottom">
-                                 <field name="model" />
-                                 <field name="method" />
-                             </tree>
-                         </field>
-                     </page>
-                     <page string="Limit Number Of Records" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
-                       <p>This sections allows to limit number of records in arbitrary model on client. Ask developers for instructions.</p>
-                       <field name="limit_line_ids" colspan="4" >
-                         <tree editable="bottom">
-                           <field name="model" />
-                           <field name="max_records" />
-                           <field name="domain" />
-                         </tree>
-                       </field>
-                     </page>
-                     <page string='Affected Database(s)'>
-                        <field name="database_ids">
-                            <tree>
-                                <field name="name"/>
-                                <field name="server_id"/>
-                                <field name="plan_id"/>
-                            </tree>
-                        </field>
-                     </page>
-                     </notebook>
-                     <footer>
+                        <page string="Addons" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
+                            <p>Comma-separated list of addons to Update, Install or Uninstall, e.g.
+                                <em>point_of_sale,website_sale</em>
+                            </p>
+                            <group>
+                                <field name="update_addons_list"/>
+                                <field name="update_addons"/>
+                                <field name="install_addons"/>
+                                <field name="uninstall_addons"/>
+                            </group>
+                        </page>
+                        <page string="Parameters" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
+                            <field name="param_ids" colspan="4">
+                                <tree editable="bottom">
+                                    <field name="key"/>
+                                    <field name="value"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Access rights">
+                            <p>Comma-separated list of references to res.groups, e.g. <em>
+                                base.group_sale_manager,stock.group_stock_manager</em>.
+                            </p>
+                            <group>
+                                <field name="access_owner_add"/>
+                                <field name="access_remove"/>
+                            </group>
+                        </page>
+                        <page string="Commands" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
+                            <p>This sections allows execute special commands on client. Ask developers for
+                                instructions.
+                            </p>
+                            <field name="fix_ids" colspan="4">
+                                <tree editable="bottom">
+                                    <field name="model"/>
+                                    <field name="method"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Limit Number Of Records" attrs="{'invisible': [('action', '!=', 'upgrade')]}">
+                            <p>This sections allows to limit number of records in arbitrary model on client. Ask
+                                developers for instructions.
+                            </p>
+                            <field name="limit_line_ids" colspan="4">
+                                <tree editable="bottom">
+                                    <field name="model"/>
+                                    <field name="max_records"/>
+                                    <field name="domain"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string='Affected Database(s)'>
+                            <field name="database_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="server_id"/>
+                                    <field name="plan_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
                         <button name="execute_action" string="Execute" type="object" class="oe_highlight"/>
                         or
                         <button string="Close" class="oe_link" special="cancel"/>
@@ -379,40 +394,33 @@
             <field name="name">Upgrade Clients</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas.config</field>
-            <field name="view_type">form</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="context">{'default_action': 'upgrade'}</field>
         </record>
 
-        <act_window
-        id="act_configure_clients"
-        name="Configure Clients"
-        res_model="saas.config"
-        key2="client_action_multi"
-        src_model="saas_portal.client"
-        context="{'default_action': 'upgrade'}"
-        view_mode="form" target="new" view_type="form" />
+        <act_window id="act_configure_clients"
+                name="Configure Clients"
+                res_model="saas.config"
+                binding_model="saas_portal.client"
+                context="{'default_action': 'upgrade'}"
+                view_mode="form" target="new" />
 
         <!--<menuitem action="action_upgrade_clients" id="menu_upgrade_clients" parent="saas_portal.menu_saas" sequence="100"/>-->
 
         <!-- Upgrade Databases -->
-
         <record id="action_updb" model="ir.actions.act_window">
             <field name="name">Configure Databases</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas.config</field>
-            <field name="view_type">form</field>
             <field name="target">new</field>
         </record>
 
-        <act_window
-        id="act_delete_batch_clients"
-        name="Delete Clients"
-        res_model="saas_portal.batch_delete_wizard"
-        key2="client_action_multi"
-        src_model="saas_portal.client"
-        view_mode="form" target="new" view_type="form" />
+        <act_window id="act_delete_batch_clients"
+                name="Delete Clients"
+                res_model="saas_portal.batch_delete_wizard"
+                binding_model="saas_portal.client"
+                view_mode="form" target="new" />
 
         <record id="view_support_team_tree" model="ir.ui.view">
             <field name="name">saas_portal.support_team.tree</field>
@@ -443,14 +451,14 @@
         <record id="saas_portal_support_teams" model="ir.actions.act_window">
             <field name="name">Support Teams</field>
             <field name="res_model">saas_portal.support_team</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem action="saas_portal_support_teams" id="menu_saas_portal_support_teams" parent="menu_saas" sequence="100"/>
+        <menuitem action="saas_portal_support_teams" id="menu_saas_portal_support_teams" parent="menu_saas"
+                  sequence="100"/>
 
         <!-- Technical Records -->
-        <menuitem id="menu_saas_tech" parent="menu_base_saas" name="Technical Records" sequence="2" />
+        <menuitem id="menu_saas_tech" parent="menu_base_saas" name="Technical Records" sequence="2"/>
 
         <!-- Templates -->
         <record id="view_databases_tree" model="ir.ui.view">
@@ -469,7 +477,7 @@
             <field name="name">saas_portal.databases.form</field>
             <field name="model">saas_portal.database</field>
             <field name="arch" type="xml">
-              <form string="plans" create="false" edit="false" delete="false">
+                <form string="plans" create="false" edit="false" delete="false">
                     <sheet>
                         <group>
                            <field name="name" />
@@ -497,12 +505,12 @@
             <field name="name">Templates</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas_portal.database</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="context">{'search_default_template': 1}</field>
         </record>
 
-        <menuitem action="action_templates" id="menu_templates" parent="menu_saas_tech" sequence="40" groups="base.group_no_one"/>
+        <menuitem action="action_templates" id="menu_templates" parent="menu_saas_tech" sequence="40"
+                  groups="base.group_no_one"/>
 
         <!-- OAuth Applications -->
         <record id="oauth_application_tree" model="ir.ui.view">
@@ -552,10 +560,9 @@
         <record id="oauth_applications" model="ir.actions.act_window">
             <field name="name">OAuth Applications</field>
             <field name="res_model">oauth.application</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem action="oauth_applications" id="menu_oauth_applications" parent="menu_saas_tech" sequence="99"/>
     </data>
-</openerp>
+</odoo>

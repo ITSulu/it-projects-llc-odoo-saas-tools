@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
         <record id="saas_portal_create_client_view_form" model="ir.ui.view">
             <field name="name">saas_portal.create_client.form</field>
@@ -28,12 +28,10 @@
             <field name="name">Create client</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">saas_portal.create_client</field>
-            <field name="view_type">form</field>
             <field name="view_mode">form</field>
             <field name="view_id" ref="saas_portal_create_client_view_form"/>
             <field name="target">new</field>
         </record>
-        
         
         <record id="saas_portal_duplicate_client_view_form" model="ir.ui.view">
             <field name="name">saas_portal.duplicate_client.form</field>
@@ -59,10 +57,9 @@
             id="action_duplicate_client"
             name="Create More Like This"
             res_model="saas_portal.duplicate_client"
-            src_model="saas_portal.client"
+            binding_model="saas_portal.client"
             target="new"
             view_mode="form"
-            view_type="form"
             />
 
         <record id="saas_portal_rename_database_view_form" model="ir.ui.view">
@@ -85,7 +82,7 @@
         <act_window id="action_rename_database"
             name="Rename Database"
             res_model="saas_portal.rename_database"
-            view_type="form" view_mode="form"
+            view_mode="form"
             target="new"
             />
 
@@ -111,10 +108,10 @@
         <act_window id="action_edit_database"
             name="Edit Database"
             res_model="saas_portal.edit_database"
-            view_type="form" view_mode="form"
+            view_mode="form"
             target="new"
             />
 
 
     </data>
-</openerp>
+</odoo>

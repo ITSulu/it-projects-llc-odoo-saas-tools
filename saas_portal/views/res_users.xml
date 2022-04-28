@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
          <!-- Update user form !-->
         <record model="ir.ui.view" id="res_user_form_saas">
@@ -30,4 +30,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>

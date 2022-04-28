@@ -2,23 +2,20 @@ import simplejson
 import werkzeug
 import requests
 import random
+
 from datetime import datetime, timedelta
-
 from odoo import api, exceptions, fields, models
-from odoo.tools import scan_languages
-from odoo.tools.translate import _
-from odoo.addons.base.res.res_partner import _tz_get
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-
+from odoo.addons.base.models.res_partner import _tz_get
 from odoo.addons.saas_base.exceptions import MaximumTrialDBException
 from odoo.addons.saas_base.exceptions import MaximumDBException
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, scan_languages
+from odoo.tools.translate import _
 from werkzeug.exceptions import Forbidden
 
 import logging
 _logger = logging.getLogger(__name__)
 
 
-@api.multi
 def _compute_host(self):
     base_saas_domain = self.env['ir.config_parameter'].sudo(
     ).get_param('saas_portal.base_saas_domain')
@@ -67,7 +64,6 @@ class SaasPortalServer(models.Model):
         record.oauth_application_id._get_access_token(create=True)
         return record
 
-    @api.multi
     def _request_params(self, path='/web', scheme=None,
                         port=None, state=None, scope=None, client_id=None):
         self.ensure_one()
@@ -88,14 +84,12 @@ class SaasPortalServer(models.Model):
         }
         return params
 
-    @api.multi
     def _request(self, **kwargs):
         self.ensure_one()
         params = self._request_params(**kwargs)
         url = '/oauth2/auth?%s' % werkzeug.url_encode(params)
         return url
 
-    @api.multi
     def _request_server(self, path=None, scheme=None, port=None, **kwargs):
         self.ensure_one()
         scheme = scheme or self.local_request_scheme or self.request_scheme
@@ -115,7 +109,6 @@ class SaasPortalServer(models.Model):
         req_kwargs = {'verify': self.verify_ssl}
         return req.prepare(), req_kwargs
 
-    @api.multi
     def action_redirect_to_server(self):
         r = self[0]
         url = '{scheme}://{saas_server}:{port}{path}'.format(
@@ -134,7 +127,6 @@ class SaasPortalServer(models.Model):
         self.search([]).action_sync_server()
         p_client.search([]).storage_usage_monitoring()
 
-    @api.multi
     def action_sync_server(self, updating_client_ID=None):
         for server in self:
             state = {
@@ -179,6 +171,7 @@ class SaasPortalServer(models.Model):
 
 class SaasPortalPlan(models.Model):
     _name = 'saas_portal.plan'
+    _description = 'SaaS Portal Plan'
 
     name = fields.Char('Plan', required=True)
     summary = fields.Char('Summary')
@@ -232,7 +225,6 @@ class SaasPortalPlan(models.Model):
     on_create_email_template = fields.Many2one('mail.template',
                                                default=lambda self: self.env.ref('saas_portal.email_template_create_saas'))
 
-    @api.multi
     @api.depends('template_id.state')
     def _compute_get_state(self):
         for plan in self:
@@ -241,7 +233,6 @@ class SaasPortalPlan(models.Model):
             else:
                 plan.state = 'draft'
 
-    @api.multi
     def _new_database_vals(self, vals):
         self.ensure_one()
         vals['max_users'] = vals.get('max_users',
@@ -254,7 +245,6 @@ class SaasPortalPlan(models.Model):
                                                    self.block_on_storage_exceed)
         return vals
 
-    @api.multi
     def _prepare_owner_user_data(self, user_id):
         """
         Prepare the dict of values to update owner user data in client instalnce. This method may be
@@ -272,7 +262,6 @@ class SaasPortalPlan(models.Model):
         }
         return owner_user_data
 
-    @api.multi
     def _get_expiration(self, trial):
         self.ensure_one()
         trial_hours = trial and self.expiration
@@ -281,11 +270,9 @@ class SaasPortalPlan(models.Model):
             hours=trial_hours)).strftime(DEFAULT_SERVER_DATETIME_FORMAT)
         return trial and trial_expiration_datetime or initial_expiration_datetime.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
 
-    @api.multi
     def create_new_database(self, **kwargs):
         return self._create_new_database(**kwargs)
 
-    @api.multi
     def _create_new_database(self, dbname=None, client_id=None,
                              partner_id=None, user_id=None, notify_user=True,
                              trial=False, support_team_id=None, async=None):
@@ -394,7 +381,6 @@ class SaasPortalPlan(models.Model):
                 'client_id': client_id,
                 'auth_url': auth_url}
 
-    @api.multi
     def generate_dbname(self, raise_error=True):
         self.ensure_one()
         if not self.dbname_template:
@@ -405,11 +391,9 @@ class SaasPortalPlan(models.Model):
         sequence = self.env['ir.sequence'].get('saas_portal.plan')
         return self.dbname_template.replace('%i', sequence)
 
-    @api.multi
     def create_template_button(self):
         return self.create_template()
 
-    @api.multi
     def create_template(self, addons=None):
         self.ensure_one()
         state = {
@@ -441,21 +425,17 @@ class SaasPortalPlan(models.Model):
         self.template_id.state = data.get('state')
         return data
 
-    @api.multi
     def action_sync_server(self):
         for r in self:
             r.server_id.action_sync_server()
         return True
 
-    @api.multi
     def edit_template(self):
         return self[0].template_id.edit_database()
 
-    @api.multi
     def upgrade_template(self):
         return self[0].template_id.show_upgrade_wizard()
 
-    @api.multi
     def delete_template(self):
         self.ensure_one()
         res = self.template_id.delete_database_server()
@@ -478,7 +458,6 @@ class OauthApplication(models.Model):
         'saas_portal.client', 'oauth_application_id',
         string='Client Database')
 
-    @api.multi
     def _compute_get_last_connection(self):
         for r in self:
             oat = self.env['oauth.access_token']
@@ -491,7 +470,7 @@ class OauthApplication(models.Model):
 
 class SaasPortalDatabase(models.Model):
     _name = 'saas_portal.database'
-
+    _description = 'SaaS Portal Database'
     _inherits = {'oauth.application': 'oauth_application_id'}
 
     name = fields.Char('Database name', readonly=False)
@@ -514,7 +493,6 @@ class SaasPortalDatabase(models.Model):
     public_url = fields.Char(compute='_compute_public_url')
     password = fields.Char()
 
-    @api.multi
     def _compute_host(self):
         base_saas_domain = self.env['ir.config_parameter'].sudo(
         ).get_param('saas_portal.base_saas_domain')
@@ -531,7 +509,6 @@ class SaasPortalDatabase(models.Model):
             else:
                 _compute_host(self)
 
-    @api.multi
     def _compute_public_url(self):
         for record in self:
             scheme = record.server_id.request_scheme
@@ -542,7 +519,6 @@ class SaasPortalDatabase(models.Model):
                 public_url = public_url + ':' + str(port)
             record.public_url = public_url + '/'
 
-    @api.multi
     def _backup(self):
         '''
         call to backup database
@@ -570,7 +546,6 @@ class SaasPortalDatabase(models.Model):
             raise Warning(warning)
         return True
 
-    @api.multi
     def action_sync_server(self):
         for record in self:
             record.server_id.action_sync_server()
@@ -584,7 +559,6 @@ class SaasPortalDatabase(models.Model):
             'url': url
         }
 
-    @api.multi
     def _request_url(self, path):
         r = self[0]
         state = {
@@ -597,23 +571,19 @@ class SaasPortalDatabase(models.Model):
             path=path, state=state, client_id=r.client_id)
         return url
 
-    @api.multi
     def _request(self, path):
         url = self._request_url(path)
         return self._proceed_url(url)
 
-    @api.multi
     def edit_database(self):
         """Obsolete. Use saas_portal.edit_database widget instead"""
         for database_obj in self:
             return database_obj._request('/saas_server/edit_database')
 
-    @api.multi
     def delete_database(self):
         for database_obj in self:
             return database_obj._request('/saas_server/delete_database')
 
-    @api.multi
     def upgrade(self, payload=None):
         config_obj = self.env['saas.config']
         res = []
@@ -625,12 +595,10 @@ class SaasPortalDatabase(models.Model):
                     payload.copy(), database_obj))
         return res
 
-    @api.multi
     def delete_database_server(self, **kwargs):
         self.ensure_one()
         return self._delete_database_server(**kwargs)
 
-    @api.multi
     def _delete_database_server(self, force_delete=False):
         for database in self:
             state = {
@@ -647,12 +615,10 @@ class SaasPortalDatabase(models.Model):
             if res.status_code != 500:
                 database.state = 'deleted'
 
-    @api.multi
     def show_upgrade_wizard(self):
         obj = self[0]
         return {
             'type': 'ir.actions.act_window',
-            'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'saas.config',
             'target': 'new',
@@ -703,7 +669,6 @@ class SaasPortalClient(models.Model):
         }
     }
 
-    @api.multi
     @api.depends('state')
     def _compute_active(self):
         for record in self:
@@ -759,7 +724,6 @@ class SaasPortalClient(models.Model):
             # odoo.service.db.exp_drop(obj.name)
         return super(SaasPortalClient, self).unlink()
 
-    @api.multi
     def write(self, values):
         if 'expiration_datetime' in values:
             payload = {
@@ -773,7 +737,6 @@ class SaasPortalClient(models.Model):
 
         return result
 
-    @api.multi
     def rename_database(self, new_dbname):
         self.ensure_one()
         # TODO async
@@ -789,18 +752,15 @@ class SaasPortalClient(models.Model):
         if res.status_code != 500:
             self.name = new_dbname
 
-    @api.multi
     def sync_client(self):
         self.ensure_one()
         self.server_id.action_sync_server(updating_client_ID=self.client_id)
 
-    @api.multi
     def check_partner_access(self, partner_id):
         for record in self:
             if record.partner_id.id != partner_id:
                 raise Forbidden
 
-    @api.multi
     def duplicate_database(self, dbname=None, partner_id=None, expiration=None):
         self.ensure_one()
         p_client = self.env['saas_portal.client']
@@ -869,14 +829,12 @@ class SaasPortalClient(models.Model):
 
         return data
 
-    @api.multi
     def get_upgrade_database_payload(self):
         self.ensure_one()
         return {'params': [{'key': 'saas_client.expiration_datetime',
                             'value': self.expiration_datetime,
                             'hidden': True}]}
 
-    @api.multi
     def send_params_to_client_db(self):
         for record in self:
             payload = {
@@ -891,7 +849,6 @@ class SaasPortalClient(models.Model):
             }
             self.env['saas.config'].do_upgrade_database(payload, record)
 
-    @api.multi
     def send_expiration_info_to_partner(self):
         for record in self:
             if record.expiration_datetime:
@@ -900,7 +857,6 @@ class SaasPortalClient(models.Model):
                 record.message_post_with_template(
                     template.id, composition_mode='comment')
 
-    @api.multi
     def storage_usage_monitoring(self):
         payload = {
             'params': [{'key': 'saas_client.suspended',
@@ -923,7 +879,7 @@ class SaasPortalClient(models.Model):
 
 class SaasPortalSupportTeams(models.Model):
     _name = 'saas_portal.support_team'
-
+    _description = 'SaaS Portal Support Teams'
     _inherit = ['mail.thread']
 
     name = fields.Char('Team name')

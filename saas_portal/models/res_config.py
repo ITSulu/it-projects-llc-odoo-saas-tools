@@ -1,21 +1,17 @@
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class SaasPortalConfigWizard(models.TransientModel):
     _inherit = 'res.config.settings'
 
     base_saas_domain = fields.Char('Base SaaS domain')
-
     page_for_maximumdb = fields.Char(help='Redirection url for maximum non-trial databases limit exception')
     page_for_maximumtrialdb = fields.Char(help='Redirection url for maximum trial databases limit exception')
     page_for_nonfree_subdomains = fields.Char(help='Redirection url from /page/start when subdomains is not free and not paid')
-
-    expiration_notify_in_advance = fields.Char(help='Notify partners when less then defined number of days left befor expiration')
-
+    expiration_notify_in_advance = fields.Char(help='Notify partners when less than defined number of days left before expiration')
     module_saas_portal_sale_online = fields.Boolean(string='Sale SaaS from website shop', help='Use saas_portal_sale_online module')
     module_saas_server_backup_rotate = fields.Boolean(string='Rotate backups', help='Use saas_server_backup_rotate module')
 
-    @api.multi
     def set_values(self):
         super(SaasPortalConfigWizard, self).set_values()
         ICPSudo = self.env['ir.config_parameter'].sudo()

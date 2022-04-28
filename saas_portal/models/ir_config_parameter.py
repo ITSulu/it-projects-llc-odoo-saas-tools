@@ -1,11 +1,10 @@
-from odoo import models, api
+from odoo import api, models
 
 
 BASE_SAAS_DOMAIN = 'saas_portal.base_saas_domain'
 
 
 class IrConfigParameter(models.Model):
-
     _inherit = 'ir.config_parameter'
 
     @api.model

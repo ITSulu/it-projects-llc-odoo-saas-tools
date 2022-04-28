@@ -1,16 +1,20 @@
 {
     'name': 'SaaS Portal',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.0',
     'author': 'Ivan Yelizariev, Nicolas JEUDY',
     'license': 'LGPL-3',
     'category': 'SaaS',
     "support": "apps@it-projects.info",
     'website': 'https://it-projects.info',
-    'depends': ['oauth_provider',
-                'website',
-                'auth_signup',
-                'saas_base',
-                'saas_utils'],
+    'depends': [
+        'auth_signup',
+        'oauth_provider',
+        'saas_base',
+        'website',
+    ],
+    'external_dependencies': {
+        'python': ['simplejson'],
+    },
     'data': [
         'data/mail_template_data.xml',
         'data/plan_sequence.xml',
