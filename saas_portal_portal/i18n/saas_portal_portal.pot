@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_portal_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 20:00+0000\n"
+"PO-Revision-Date: 2022-04-22 20:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "$ ping"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid ""
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
+"Expired</span>"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"<strong>Apply</strong>\n"
+"                <span class=\"hidden-xs\"/>"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"Be sure that the new domain name is point to our server before you apply"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Domain name"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_instances
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_home_saas
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Instances"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Look up for IP address of our server as such:"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"Map your new name to the IP address on your DNS server. Use the A record for"
+" that."
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Name"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Plan"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "There are currently no instances for your account."
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "To work with the new domain you should do the following:"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Valid Until"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Warning:"
+msgstr ""
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "your-new-domain-name"
+msgstr ""

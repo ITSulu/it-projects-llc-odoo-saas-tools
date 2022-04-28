@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_portal_portal
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220420\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 20:01+0000\n"
+"PO-Revision-Date: 2022-04-25 08:23-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "$ ping"
+msgstr "$ ping"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid ""
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
+"Expired</span>"
+msgstr ""
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
+"Expired</span>"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"<strong>Apply</strong>\n"
+"                <span class=\"hidden-xs\"/>"
+msgstr ""
+"<strong>Aplicar</strong>\n"
+"                <span class=\"hidden-xs\"/>"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"Be sure that the new domain name is point to our server before you apply"
+msgstr ""
+"Asegúrese de que el nuevo nombre de dominio apunte a nuestro servidor antes "
+"de aplicar"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Domain name"
+msgstr "Nombre de dominio"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_instances
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_home_saas
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Instances"
+msgstr "Instancias"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Look up for IP address of our server as such:"
+msgstr "Busque la dirección IP de nuestro servidor como tal:"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"Map your new name to the IP address on your DNS server. Use the A record for"
+" that."
+msgstr ""
+"Asigne su nuevo nombre a la dirección IP en su servidor DNS. Usa el registro "
+"A para eso."
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Name"
+msgstr "Nombre"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Plan"
+msgstr "Plan"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "There are currently no instances for your account."
+msgstr "Actualmente no hay instancias para su cuenta."
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "To work with the new domain you should do the following:"
+msgstr "Para trabajar con el nuevo dominio debes hacer lo siguiente:"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Valid Until"
+msgstr "Válido hasta"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Warning:"
+msgstr "Advertencia:"
+
+#. module: saas_portal_portal
+#: model_terms:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "your-new-domain-name"
+msgstr "su-nuevo-nombre-dominio"
