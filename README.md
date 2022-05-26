@@ -12,7 +12,6 @@ These addons are mainly focus on integrating Odoo with [Pídela.App](https://pid
 |:white_check_mark: [auth_oauth_check_client_id](auth_oauth_check_client_id/) | Auth OAuth - Check client_id |
 |:white_check_mark: [auth_oauth_ip](auth_oauth_ip/) | Allows to check access_token by requests in local network |
 :white_check_mark: [oauth_provider](oauth_provider/) | Allows to users to login in Odoo databases via master database |
-:white_check_mark: [odoo_saas_kit](odoo_saas_kit/) | Odoo SaaS Kit |
 :white_check_mark: [saas_base](saas_base/) | SaaS Base, this module to use in SaaS environment |
 :white_check_mark: [saas_client](saas_client/) | SaaS Client, this module for client database |
 |:white_check_mark: [saas_portal](saas_portal/) | SaaS Portal, this module for main database in SaaS structure |
