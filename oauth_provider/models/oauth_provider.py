@@ -11,10 +11,11 @@ import uuid
 
 
 class OauthApplication(models.Model):
-    CLIENT_ID_CHARACTER_SET = r'_-.:;=?!@0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-
     _name = 'oauth.application'
+    _description = 'Oauth Application'
     _rec_name = 'client_id'
+
+    CLIENT_ID_CHARACTER_SET = r'_-.:;=?!@0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
     def generate_client_id(self):
         return str(uuid.uuid1())
@@ -56,6 +57,7 @@ class OauthApplication(models.Model):
 
 class OauthAccessToken(models.Model):
     _name = 'oauth.access_token'
+    _description = 'Oauth Access Token'
 
     application_id = fields.Many2one('oauth.application', string='Application')
     token = fields.Char('Access Token', required=True)

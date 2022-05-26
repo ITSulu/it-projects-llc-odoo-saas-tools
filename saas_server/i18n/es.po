@@ -34,7 +34,7 @@ msgstr "Accion necesaria"
 #. module: saas_server
 #: model:ir.model.fields,field_description:saas_server.field_saas_server_client__message_attachment_count
 msgid "Attachment Count"
-msgstr "Contar de archivos adjuntos"
+msgstr "Contar archivos adjuntos"
 
 #. module: saas_server
 #: model:ir.model.fields.selection,name:saas_server.selection__saas_server_client__state__cancelled
@@ -118,7 +118,7 @@ msgstr "Eliminado"
 #. module: saas_server
 #: model:ir.model.fields,field_description:saas_server.field_saas_server_client__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_server
 #: model:ir.model.fields,field_description:saas_server.field_saas_server_client__expiration_datetime
