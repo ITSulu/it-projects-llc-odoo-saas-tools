@@ -5,7 +5,7 @@ Odoo SaaS Tools
 
 System to sale and manage odoo databases.
 
-These addons are mainly focus on integrating Odoo with [Pídela.App](https://pidela.cl/) Services.
+These addons are mainly focus on integrating Odoo with [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) hosting.
 
 | Module | Description |
 |--------|-------------|
