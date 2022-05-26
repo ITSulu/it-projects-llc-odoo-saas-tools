@@ -30,7 +30,7 @@ msgstr "Almacenamiento de base de datos (MB)"
 #. module: saas_base
 #: model:ir.model.fields,field_description:saas_base.field_saas_base_client__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_base
 #: model:ir.model.fields,field_description:saas_base.field_saas_base_client__file_storage

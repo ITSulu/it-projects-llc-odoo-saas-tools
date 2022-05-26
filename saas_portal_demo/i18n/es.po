@@ -167,7 +167,7 @@ msgstr "Plan de demostración donde se pretende instalar el módulo"
 #: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module__display_name
 #: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_portal_demo
 #: model_terms:ir.ui.view,arch_db:saas_portal_demo.view_server_form

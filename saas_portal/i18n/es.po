@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20220420\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-22 19:58+0000\n"
-"PO-Revision-Date: 2022-04-25 19:03-0400\n"
+"PO-Revision-Date: 2022-04-25 19:05-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
 "Language: es\n"
@@ -643,7 +643,7 @@ msgstr "Borrado"
 #: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server__display_name
 #: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_portal
 #: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line__domain
@@ -1340,12 +1340,12 @@ msgstr "Aplicaciones OAuth"
 #. module: saas_portal
 #: model_terms:ir.ui.view,arch_db:saas_portal.view_plans_form
 msgid "Odoo DB Settings"
-msgstr "Configuración de base de datos de Odoo"
+msgstr "Configuración de base de datos de Pidela.App"
 
 #. module: saas_portal
 #: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server__odoo_version
 msgid "Odoo version"
-msgstr "Versión de Odoo"
+msgstr "Versión de Pidela.App"
 
 #. module: saas_portal
 #: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan__on_create_email_template
@@ -1810,14 +1810,14 @@ msgstr "Resumen"
 #: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client__support_team_id
 #: model_terms:ir.ui.view,arch_db:saas_portal.view_support_team_form
 msgid "Support Team"
-msgstr "Equipo de apoyo"
+msgstr "Equipo de soporte"
 
 #. module: saas_portal
 #: model:ir.actions.act_window,name:saas_portal.saas_portal_support_teams
 #: model:ir.ui.menu,name:saas_portal.menu_saas_portal_support_teams
 #: model_terms:ir.ui.view,arch_db:saas_portal.view_support_team_tree
 msgid "Support Teams"
-msgstr "Equipos de apoyo"
+msgstr "Equipos de soporte"
 
 #. module: saas_portal
 #: model:ir.model.fields,help:saas_portal.field_res_users__support_team_id

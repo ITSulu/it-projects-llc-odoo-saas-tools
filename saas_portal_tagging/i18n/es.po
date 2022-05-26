@@ -52,7 +52,7 @@ msgstr "Creado en"
 #. module: saas_portal_tagging
 #: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_tag_client__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_portal_tagging
 #: model:ir.model.fields,field_description:saas_portal_tagging.field_saas_portal_category__name

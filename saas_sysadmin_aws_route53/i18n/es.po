@@ -40,7 +40,7 @@ msgstr "Creado el"
 #. module: saas_sysadmin_aws_route53
 #: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_sysadmin_aws_route53
 #: model:ir.model.fields,field_description:saas_sysadmin_aws_route53.field_saas_sysadmin_route53_zone__name

@@ -73,7 +73,7 @@ msgstr "URL de demostración"
 #. module: saas_server_demo
 #: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: saas_server_demo
 #: model:ir.model.fields,field_description:saas_server_demo.field_saas_server_repository__id

@@ -48,7 +48,7 @@ msgstr "UUID Base de datos"
 #: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__display_name
 #: model:ir.model.fields,field_description:oauth_provider.field_oauth_application__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre mostrado"
 
 #. module: oauth_provider
 #: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token__expires
