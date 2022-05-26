@@ -1,21 +1,19 @@
-import re
-import werkzeug
-import urllib.request
-import urllib.error
-import urllib.parse
 import json
+import re
+import urllib.request
+import urllib.parse
+import werkzeug
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 
 
 class auth_oauth_provider(models.Model):
-
     _inherit = 'auth.oauth.provider'
 
-    local_host = fields.Char(
-        'Local IP', help='Address to be used in server-wide requests')
-    local_port = fields.Char(
-        'Local Port', help='Address to be used in server-wide requests')
+    local_host = fields.Char(string='Local IP',
+        help='Address to be used in server-wide requests')
+    local_port = fields.Char(string='Local Port',
+        help='Address to be used in server-wide requests')
 
 
 class res_users(models.Model):
@@ -48,6 +46,7 @@ class res_users(models.Model):
 
     @api.model
     def _auth_oauth_validate(self, provider, access_token):
+        """ return the validation data corresponding to the access token """
         p = self.env['auth.oauth.provider'].browse(provider)
         self = self.with_context(local_host=p.local_host, local_port=p.local_port)
         return super(res_users, self)._auth_oauth_validate(provider, access_token)

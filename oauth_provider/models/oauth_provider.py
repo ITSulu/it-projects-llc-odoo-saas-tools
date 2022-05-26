@@ -1,13 +1,11 @@
-from odoo import models, fields, api
 from datetime import datetime, timedelta
+import uuid
+from odoo import fields, models
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-
 try:
     from oauthlib import common as oauthlib_common
 except Exception as e:
     pass
-
-import uuid
 
 
 class OauthApplication(models.Model):
@@ -20,8 +18,10 @@ class OauthApplication(models.Model):
     def generate_client_id(self):
         return str(uuid.uuid1())
 
-    client_id = fields.Char('Client ID', index=True, required=True, default=generate_client_id)
-    token_ids = fields.One2many('oauth.access_token', 'application_id', 'Tokens')
+    client_id = fields.Char(string='Client ID',
+        index=True, required=True, default=generate_client_id)
+    token_ids = fields.One2many('oauth.access_token',
+        'application_id', string='Tokens')
 
     _sql_constraints = [
         ('client_id_uniq', 'unique (client_id)', 'client_id should be unique!'),
@@ -60,10 +60,10 @@ class OauthAccessToken(models.Model):
     _description = 'Oauth Access Token'
 
     application_id = fields.Many2one('oauth.application', string='Application')
-    token = fields.Char('Access Token', required=True)
+    token = fields.Char(string='Access Token', required=True)
     user_id = fields.Many2one('res.users', string='User', required=True)
-    expires = fields.Datetime('Expires', required=True)
-    scope = fields.Char('Scope')
+    expires = fields.Datetime(string='Expires', required=True)
+    scope = fields.Char(string='Scope')
 
     def is_valid(self, scopes=None):
         """

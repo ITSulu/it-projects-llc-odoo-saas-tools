@@ -11,11 +11,8 @@ class SaasTagClient(models.TransientModel):
             self.env.context['active_id'])
         return client.category_ids.ids
 
-    category_ids = fields.Many2many(
-        'saas.portal.category',
-        string='Tags',
-        default=_default_categories
-    )
+    category_ids = fields.Many2many('saas.portal.category',
+        string='Tags', default=_default_categories)
 
     def apply(self):
         self.ensure_one()

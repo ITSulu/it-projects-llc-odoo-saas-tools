@@ -19,26 +19,13 @@ class SaasPortalCategory(models.Model):
             name = self.parent_id.name + ' / ' + name
         self.display_name = name
 
-    name = fields.Char(
-        "Employee Tag",
-        required=True
-    )
-    display_name = fields.Char(
-        'Name',
-        compute='_name_get_fnc',
-        store=True,
-        readonly=True
-    )
-    parent_id = fields.Many2one(
-        'saas.portal.category',
-        'Parent Employee Tag',
-        index=True
-    )
-    child_ids = fields.One2many(
-        'saas.portal.category',
-        'parent_id',
-        'Child Categories'
-    )
+    name = fields.Char(string="Employee Tag", required=True)
+    display_name = fields.Char(string='Name',
+        compute='_name_get_fnc', store=True, readonly=True)
+    parent_id = fields.Many2one('saas.portal.category',
+        string='Parent Employee Tag', index=True)
+    child_ids = fields.One2many('saas.portal.category',
+        'parent_id', string='Child Categories')
 
     @api.constrains('parent_id')
     def _check_recursion(self):
