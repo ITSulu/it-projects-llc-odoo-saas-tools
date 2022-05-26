@@ -34,29 +34,29 @@ class SaasPortalServer(models.Model):
     _inherit = ['mail.thread']
     _inherits = {'oauth.application': 'oauth_application_id'}
 
-    name = fields.Char('Database name', required=True)
-    oauth_application_id = fields.Many2one(
-        'oauth.application', 'OAuth Application', required=True, ondelete='cascade')
-    sequence = fields.Integer('Sequence')
+    name = fields.Char(string='Database name', required=True)
+    oauth_application_id = fields.Many2one('oauth.application',
+        string='OAuth Application', required=True, ondelete='cascade')
+    sequence = fields.Integer(string='Sequence')
     active = fields.Boolean('Active', default=True)
-    request_scheme = fields.Selection(
-        [('http', 'http'), ('https', 'https')], 'Scheme', default='http', required=True)
-    verify_ssl = fields.Boolean(
-        'Verify SSL', default=True, help="verify SSL certificates for server-side HTTPS requests, just like a web browser")
-    request_port = fields.Integer('Request Port', default=80)
-    client_ids = fields.One2many(
-        'saas_portal.client', 'server_id', string='Clients')
-    local_host = fields.Char(
-        'Local host', help='local host or ip address of server for server-side requests')
-    local_port = fields.Char(
-        'Local port', help='local tcp port of server for server-side requests')
-    local_request_scheme = fields.Selection(
-        [('http', 'http'), ('https', 'https')], 'Scheme', default='http', required=True)
-    host = fields.Char('Host', compute=_compute_host)
-    odoo_version = fields.Char('Odoo version', readonly=True)
-    password = fields.Char()
-    clients_host_template = fields.Char('Template for clients host names',
-                                        help='The possible dynamic parts of the host names are: {dbname}, {base_saas_domain}, {base_saas_domain_1}')
+    request_scheme = fields.Selection(string='Scheme',
+        [('http', 'http'), ('https', 'https')], default='http', required=True)
+    verify_ssl = fields.Boolean(string='Verify SSL',
+        default=True, help="verify SSL certificates for server-side HTTPS requests, just like a web browser")
+    request_port = fields.Integer(string='Request Port', default=80)
+    client_ids = fields.One2many('saas_portal.client',
+        'server_id', string='Clients')
+    local_host = fields.Char(string='Local host',
+        help='local host or ip address of server for server-side requests')
+    local_port = fields.Char(string='Local port',
+        help='local tcp port of server for server-side requests')
+    local_request_scheme = fields.Selection(string='Scheme',
+        selection=[('http', 'http'), ('https', 'https')], default='http', required=True)
+    host = fields.Char(string='Host', compute=_compute_host)
+    odoo_version = fields.Char(string='Odoo version', readonly=True)
+    password = fields.Char(string='Password')
+    clients_host_template = fields.Char(string='Template for clients host names',
+        help='The possible dynamic parts of the host names are: {dbname}, {base_saas_domain}, {base_saas_domain_1}')
 
     @api.model
     def create(self, vals):
@@ -499,7 +499,7 @@ class SaasPortalDatabase(models.Model):
         base_saas_domain_1 = '.'.join(base_saas_domain.rsplit('.', 2)[-2:])
         name_dict = {
             'base_saas_domain': base_saas_domain,
-            'base_saas_domain_1': base_saas_domain_1,
+            'base_saas_domain_CLIENT_ID_CHARACTER_SET = r'_-.:;=?!@0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'1': base_saas_domain_1,
         }
         for record in self:
             if record.server_id.clients_host_template:
