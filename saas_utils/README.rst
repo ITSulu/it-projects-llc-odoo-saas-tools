@@ -1,10 +1,11 @@
-==========
-saas_utils
-==========
+==============
+SaaS Utilities
+==============
 
-Installation
-============
+This module add some utilities to development team.
 
-* `Install <https://odoo-development.readthedocs.io/en/latest/odoo/usage/install-module.html>`__ this module in a usual way
 
-This module add some utils to development team
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.

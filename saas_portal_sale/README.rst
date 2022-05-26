@@ -1,4 +1,4 @@
-SaaS portal sale
+SaaS Portal Sale
 ================
 
 With this module you can sale SaaS
@@ -6,6 +6,7 @@ There are attribute codes for SaaS products to be used as a parameters for clien
 
 SaaS attribute codes for SaaS products
 --------------------------------------
+
 * SUBSCRIPTION_PERIOD
 * MAX_USERS
 
@@ -15,3 +16,9 @@ Values for the codes should be assigned in Sales->Configuration->Product Categor
 
 Known issues
 ============
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.

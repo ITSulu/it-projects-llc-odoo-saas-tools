@@ -1,12 +1,12 @@
-==================
- Demo datatabases
-==================
+===================
+SaaS Demo Databases
+===================
 
-All you need to create demos for your applications in `odoo apps store <https://apps.odoo.com/>`_!
+All you need to create demos for your applications in `Odoo apps store <https://apps.odoo.com/>`_!
 
 The module extends shop pages:
 
-* Adds list of demostrated modules
+* Adds list of demonstrated modules
 
   * design is similar to one in apps store + button Buy
   * clicking on each module navigates user to app store
@@ -28,8 +28,15 @@ Demo databases are automatically destroyed after 3 hours (configurable).
 
 Technically Page is a Plan (``saas_portal.plan``) and demo databases are duplicates from Plan's template.
 
-Plans and templates are generated based on the information from ``__openerp__.py`` files - see the ``saas_server_demo`` module's documentation
+Plans and templates are generated based on the information from ``__manifest__.py`` files - see the ``saas_server_demo`` module's documentation
 about new demo parameters.
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.
+
 
 Credits
 =======

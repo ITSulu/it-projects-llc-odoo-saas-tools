@@ -1,10 +1,13 @@
 SaaS Portal Asynchronous database creation
 ==========================================
+
 Asynchronous client database creation.
 
 Attention!
 ==========
+
 Module does not work on 9.0 because connector ain't ported for 9.0 for this time.
+
 
 Usage
 =====
@@ -24,6 +27,12 @@ Directly actions
 Install this module.
 
 
-Mark "asynchronous" checkbox when creating new client database from saas plan.
+Mark "asynchronous" checkbox when creating new client database from SaaS plan.
 
 You can look up database creation jobs in Connector->Jobs. If job is done new base is finished.
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.

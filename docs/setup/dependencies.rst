@@ -6,20 +6,20 @@
 Core dependencies
 =================
 
-* oauthlib:
+* `oauthlib <https://pypi.org/project/oauthlib/>`__:
 
-    pip install oauthlib
+    pip3 install oauthlib
 
 * requests
 
-    pip install requests --upgrade
+    pip3 install requests --upgrade
 
 Amazon services
 ===============
 
-* boto
+* `boto <https://pypi.org/project/boto/>`__:
 
-    pip install boto
+    pip3 install boto
 
 Used by
 
@@ -30,9 +30,9 @@ Used by
 FTP
 ===
 
-* pysftp
+* `pysftp <https://pypi.org/project/pysftp/>`__:
 
-    pip install pysftp
+    pip3 install pysftp
  
 Used by
 
@@ -44,7 +44,7 @@ Addons
 website_sale_require_login
 --------------------------
 
-  The module can be found here: https://github.com/OCA/e-commerce/tree/9.0/website_sale_require_login
+  The module can be found here: https://github.com/OCA/e-commerce/tree/13.0/website_sale_require_login
  
 Used by
 
@@ -53,7 +53,7 @@ Used by
 access_limit_records_number
 ---------------------------
 
-  The module can be found here: https://github.com/it-projects-llc/access-addons/tree/9.0/access_limit_records_number
+  The module can be found here: https://github.com/itpp-labs/access-addons/tree/13.0/access_limit_records_number
   
 Used by
 

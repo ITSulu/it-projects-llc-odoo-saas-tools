@@ -4,8 +4,15 @@
 
 This is base module for all modules that use Amazon AWS.
 With it you set your credentials (Access Key ID and Secret Access Key)
-so that other modules could take them and use with AWS SDK that is boto python library
+so that other modules could take them and use with AWS SDK that is ``boto`` python library
 to control services such as Route53 or EC2 for example.
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.
+
 
 Contributors
 ============
@@ -13,9 +20,11 @@ Contributors
 * Salton Massally <smassally@idtlabs.sl> (iDT Labs)
 * Nicolas JEUDY <https://github.com/njeudy>
 
+
 Sponsors
 ========
 * `IT-Projects LLC <https://it-projects.info>`__
+
 
 Further information
 ===================

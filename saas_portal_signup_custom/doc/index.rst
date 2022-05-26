@@ -21,10 +21,10 @@ Configuration
  * Open menu ``SaaS >> SaaS >> Plans``
  * Click ``[Create]`` button
  * Select ``SaaS Server`` and ``Template`` or create new template
- * Check other settings and clik ``[Save]`` button
+ * Check other settings and click ``[Save]`` button
  * Do the same steps for the second plan but select the template you have selected for your first plan etc.
 
-* Create product and associate it with saas plans
+* Create product and associate it with SaaS plans
 
  * Open menu ``Sales >> Products >> Products``
  * Click ``[Create]`` button

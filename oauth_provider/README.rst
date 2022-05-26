@@ -1,4 +1,4 @@
-Addon allows to users to login in odoo databases via master database
+Addon allows to users to login in Odoo databases via master database
 
 INSTALLATION
 ============
@@ -15,8 +15,8 @@ Terms
 -----
 
 * User -- a human
-* Master -- an odoo database where this module is installed
-* Client -- an odoo database where you need to authenticate user and where module auth_oauth module is installed
+* Master -- an Odoo database where this module is installed
+* Client -- an Odoo database where you need to authenticate user and where module auth_oauth module is installed
 
 
 Steps

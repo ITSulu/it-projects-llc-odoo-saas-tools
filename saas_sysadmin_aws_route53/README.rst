@@ -3,8 +3,15 @@
 ===========================
 
 This module is designed for use by another modules
-such as saas_sysadmin_mailgun that is dependent
-on AWS DNS servers fascility.
+such as ``saas_sysadmin_mailgun`` that is dependent
+on AWS DNS servers facility.
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.
+
 
 Credits
 =======

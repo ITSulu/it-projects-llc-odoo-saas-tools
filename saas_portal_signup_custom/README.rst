@@ -2,7 +2,14 @@
  Create databases after signup custom
 ======================================
 
-This is customization of saas_portal_signup module that allows to create several databases for new customers after signup.
+This is customization of ``saas_portal_signup`` module that allows to create several databases for new customers after signup.
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.
+
 
 Credits
 =======

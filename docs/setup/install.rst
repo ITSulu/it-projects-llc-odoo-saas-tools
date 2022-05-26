@@ -1,14 +1,14 @@
 Instruction for manual installation
 ===================================
 
-*Use saas.py script for automatic installation*
+*Use ``saas.py`` script for automatic installation*
 
 1. Configure Odoo installation
 
-   * set dbfilter in config file or run odoo with --db-filter parameter, e.g. ^%h$
+   * set dbfilter in config file or run odoo with ``--db-filter`` parameter, e.g. ``^%h$``
    
-     * be sure, that you don't use db_name in config file and don't run odoo with -d (--database) parameter
-     * check `odoo documentation <https://www.odoo.com/documentation/8.0/reference/cmdline.html>`__ for understanding db filter and database parameters.
+     * be sure, that you don't use ``db_name`` in config file and don't run odoo with ``-d`` (``--database``) parameter
+     * check `odoo documentation <https://www.odoo.com/documentation/13.0/developer/misc/other/cmdline.html>`__ for understanding db filter and database parameters.
 
    * execute commands below to allow create databases with dots in name: ::
 
@@ -16,7 +16,7 @@ Instruction for manual installation
     
     sed -i 's/matches="[^"]*"//g' addons/web/static/src/xml/base.xml
 
-   * If you run odoo locally, add domains you are going to use to /etc/hosts. E.g. ::
+   * If you run odoo locally, add domains you are going to use to ``/etc/hosts``. E.g. ::
 
     127.0.0.1	odoo.local # portal
     
@@ -32,7 +32,7 @@ Instruction for manual installation
     
     127.0.0.1	client-z.odoo.local
 
-   * Redirect requests to domains above to localhost:8069 (e.g. via nginx)
+   * Redirect requests to domains above to localhost:8069 (e.g. via ``nginx``)
    
      * be sure, that odoo gets host header, e.g. for nginx: ::
 
@@ -46,13 +46,13 @@ Instruction for manual installation
 
    * install dependencies:
    
-     * oauthlib:
+     * `oauthlib <https://pypi.org/project/oauthlib/>`__
      
-       * pip install oauthlib
+       * pip3 install oauthlib
        
-     * requests
+     * `requests <https://pypi.org/project/requests/>`__
      
-       * pip install requests --upgrade
+       * pip3 install requests --upgrade
 
 2. Create two databases (via /web/database/manager):
 

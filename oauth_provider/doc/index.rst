@@ -2,7 +2,7 @@
 oauth_provider
 ==============
 
-Addon allows to users to login in odoo databases via master database
+Addon allows to users to login in Odoo databases via master database
 
 INSTALLATION
 ============

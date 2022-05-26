@@ -1,5 +1,5 @@
 ==========================
- Mailgun for saas clients
+ Mailgun for SaaS clients
 ==========================
 
 This module automatically creates mail domain on your account
@@ -10,14 +10,22 @@ The records also created automatically by the module.
 Amazon Web Services Route 53 account are required for this purpose.
 
 
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.
+
+
 Contributors
 ============
 * Ildar Nasyrov <Nasyrov@it-projects.info>
 * Nicolas JEUDY <https://github.com/njeudy>
 
+
 Sponsors
 ========
 * `IT-Projects LLC <https://it-projects.info>`__
+
 
 Further information
 ===================

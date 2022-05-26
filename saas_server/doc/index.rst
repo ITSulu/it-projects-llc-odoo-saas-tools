@@ -16,8 +16,8 @@ the Portal could know where demo modules are to get information needed to genera
 
   * choose the repository from drop-down list of available repositories
 
-Parameters in __openerp__.py for demo modules
----------------------------------------------
+Parameters in __manifest__.py for demo modules
+----------------------------------------------
 
 * demo_title
 * demo_addons
@@ -26,7 +26,7 @@ Parameters in __openerp__.py for demo modules
 * demo_summary
 * demo_images
 
-The example of __openerp__.py file of ``reminder_base``:
+The example of ``__manifest__.py`` file of ``reminder_base``:
 
 ::
 
@@ -71,7 +71,7 @@ Demo modules list initialization
 --------------------------------
 
 After appending demo parameters to some module the demo list
-should be reinitalized
+should be reinitialized
 
 * From ``Settings / Users / Users`` open admin user's form and activate ``Technical Features`` on it
 * reload the page

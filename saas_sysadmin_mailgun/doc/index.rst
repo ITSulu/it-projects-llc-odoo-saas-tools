@@ -1,5 +1,5 @@
 ==========================
- Mailgun for saas clients
+ Mailgun for SaaS clients
 ==========================
 
 Configuration
@@ -16,11 +16,11 @@ If you are familiar with DNS then you may register domain
 on any other DNS registrator, for example, on https://www.godaddy.com
 and then delegate it to Amazon Route 53.
 
-* install boto - python interface library to Amazon Web Services:
+* install ``boto`` - python interface library to Amazon Web Services:
 
 ::
 
- sudo pip install boto
+    $ sudo pip install boto
 
 
 * On http://aws.amazon.com/ create AWS account
@@ -49,15 +49,15 @@ SaaS Portal
 -----------
 
 * From menu ``Settings / SaaS Portal Settings`` put your Amazon Access Key ID and Secret Access Key into Amazon access section and click ``[apply]``
-* From menu ``Settings > Saas Portal Settings`` put your Mailgun API Key into Mailgun access section and click ``[apply]``
-* Open ``SaaS / SaaS / Servers`` and select the saas server where you want to create client databases with mail feature.
+* From menu ``Settings > SaaS Portal Settings`` put your Mailgun API Key into Mailgun access section and click ``[apply]``
+* Open ``SaaS / SaaS / Servers`` and select the SaaS server where you want to create client databases with mail feature.
 Here you should:
 
  * Click ``[Edit]`` button
  * In ``System Admin Settings`` section fill ``Server IP Address`` field and click ``[Save]``.
- If you want your clients to be able to use Incomming mail feature then there should be public IP address
+ If you want your clients to be able to use Incoming mail feature then there should be public IP address
  of your server.
- If you just want your cliets to be able to send mails then there may be any IP address.
+ If you just want your clients to be able to send mails then there may be any IP address.
 
  * Click ``[Edit]`` button
  * In ``System Admin Settings`` section fill ``AWS Hosted Zone`` field
@@ -89,7 +89,7 @@ In template database:
 * Select ``localhost`` configuration line and delete it using ``[Action]`` button
 
 The steps above guarantee only Outgoing mails.
-If you want your clients not only send but receive mails, i.e. Incomming mails,
+If you want your clients not only send but receive mails, i.e. Incoming mails,
 you should do the following:
 
 * In template database install this module https://github.com/it-projects-llc/mail-addons/tree/9.0/mailgun
@@ -111,7 +111,7 @@ Usage
 
 * Try to create client database as usual
 * On creating new client database a new mail domain will be created for it in your account of mailgun.com
-* This mail domain will be validated using Route53, all necessary dns records will be created
+* This mail domain will be validated using Route53, all necessary DNS records will be created
 * In the client database Outgoing mail configuration will be done
 * If you have installed this module https://github.com/it-projects-llc/mail-addons/tree/9.0/mailgun on
 template database as mentioned in ``Configuration in template database`` and

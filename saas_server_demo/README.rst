@@ -1,12 +1,19 @@
 ==================
- Saas Server Demo
+ SaaS Server Demo
 ==================
 
-This module introduces additional parameters for __manifest__.py
+This module introduces additional parameters for ``__manifest__.py``
 so that modules with these parameters
 can be demonstrated in automatically generated databases.
 It also makes possible to update the modules' Git repositories and restart the Server through commands from SaaS Portal
 so new demo databases could be created with latest updates in the demonstrated modules.
+
+
+License
+=======
+
+Please see `LICENSE <LICENSE>`__ file for more License information.
+
 
 Contributors
 ------------

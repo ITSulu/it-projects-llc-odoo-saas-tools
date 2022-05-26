@@ -38,10 +38,11 @@ Signup a user on SaaS Portal
 
 
 Before client database can be created a user of this client database should already exist on SaaS Portal.
-There are several ways to create a new user in odoo.
+There are several ways to create a new user in Odoo.
 Signup procedure creates users and assign the following groups to them:
 
 * Portal
+
 * View Online Payment Options
 
 Membership in these groups gives users minimum privileges on SaaS Portal.
@@ -226,13 +227,18 @@ To restrict access for all users by excluding them from the show modules menu gr
                         'saas.config', 'do_upgrade_database',
                         [data, saas_portal_client_id])
 
-Notes abouts API integration
+Notes about API integration
 ============================
 
 
-* Be sure, that Portal module is installed at Main Database
-* Be sure, that "Allow external users to sign up" option from "Settings/General Settings" is enabled (this option is only available in Debug mode)
-* To find new signuped user open "Settings/Users" at Main Database and delete filter "Regular users only"
-* don't use trailing slash at main_url
-* Access token is expired in one hour
-* In case of log out, client has to click "Log in via SaaS Portal". Client will be navigated to Portal database and can use client_username and client_password. After that the client will be returned back to his database. Important thing here, is that the client is not able to use client_password at login page of his database.
+* Be sure, that Portal module is installed at Main Database.
+
+* Be sure, that "Allow external users to sign up" option from "Settings/General Settings" is enabled (this option is only available in Debug mode).
+
+* To find new signuped user open "Settings/Users" at Main Database and delete filter "Regular users only".
+
+* don't use trailing slash at ``main_url``.
+
+* Access token is expired in one hour.
+
+* In case of log out, client has to click "Log in via SaaS Portal". Client will be navigated to Portal database and can use ``client_username`` and ``client_password``. After that the client will be returned back to his database. Important thing here, is that the client is not able to use ``client_password`` at login page of his database.

@@ -47,6 +47,7 @@ If you want to sale subscriptions, you should add subscription values for your
 products firstly:
 
 * Period
+
 * Number of users
 
 Please take a look how to do it in the following instruction:
@@ -54,10 +55,11 @@ Please take a look how to do it in the following instruction:
 1: In ``Sales >> Sales >> Product >> [Your Product]`` Variants tab create Attributes:
 
 * "Period" with values: Monthly, Quarterly, Yearly
+
 * "Number of users" with values: 1,2,3,…
 .. image:: ../images/3.jpg
 
-2: Press *Variant Prices* key. There you should set Saas code values as
+2: Press *Variant Prices* key. There you should set SaaS code values as
 
 30 for Monthly
 
@@ -146,7 +148,7 @@ the price changes accordingly.
 
 
 * if the client has trial database already, the Maximum users allowed and
-the Expiraton datetime parameters will be updated in the client database (note
+the Expiration datetime parameters will be updated in the client database (note
 that in this case in the corresponding plan you need to choose 'From trial' in the
 **Non-trial instances** field)
 

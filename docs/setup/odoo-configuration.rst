@@ -2,7 +2,7 @@
  Configuration requirements
 ============================
 
-Check official doc for understanding parameters: https://www.odoo.com/documentation/8.0/reference/cmdline.html
+Check official doc for understanding parameters: https://www.odoo.com/documentation/13.0/developer/misc/other/cmdline.html
 
 dbfilter
 ========
@@ -35,7 +35,9 @@ addons_path
 It must include
 
 * odoo addons
+
 * odoo-saas-tools
+
 * `dependencies <dependencies.rst>`__
 
 db_user
